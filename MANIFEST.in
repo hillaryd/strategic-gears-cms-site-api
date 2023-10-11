@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include strategic_gears_cms_site_api *.css
+recursive-include strategic_gears_cms_site_api *.csv
+recursive-include strategic_gears_cms_site_api *.html
+recursive-include strategic_gears_cms_site_api *.ico
+recursive-include strategic_gears_cms_site_api *.js
+recursive-include strategic_gears_cms_site_api *.json
+recursive-include strategic_gears_cms_site_api *.md
+recursive-include strategic_gears_cms_site_api *.png
+recursive-include strategic_gears_cms_site_api *.py
+recursive-include strategic_gears_cms_site_api *.svg
+recursive-include strategic_gears_cms_site_api *.txt
+recursive-exclude strategic_gears_cms_site_api *.pyc
