@@ -9,8 +9,8 @@
  "engine": "InnoDB",
  "field_order": [
   "banner_name",
-  "sequence",
   "banner_image",
+  "sequence",
   "text",
   "button_text",
   "button_label",
@@ -56,7 +56,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 19:25:14.970958",
+ "modified": "2023-10-12 10:33:42.684483",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Banner",
