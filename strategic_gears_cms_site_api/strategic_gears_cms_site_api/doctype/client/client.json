@@ -8,7 +8,8 @@
  "engine": "InnoDB",
  "field_order": [
   "banner",
-  "heading"
+  "heading",
+  "client_details"
  ],
  "fields": [
   {
@@ -19,15 +20,20 @@
   },
   {
    "fieldname": "heading",
+   "fieldtype": "Data",
+   "label": "Heading"
+  },
+  {
+   "fieldname": "client_details",
    "fieldtype": "Table",
-   "label": "Heading",
+   "label": "Client Details",
    "options": "Client Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-13 04:54:41.391321",
+ "modified": "2023-10-12 17:12:27.330167",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Client",

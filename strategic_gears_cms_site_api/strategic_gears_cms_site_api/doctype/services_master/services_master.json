@@ -45,14 +45,14 @@
   },
   {
    "fieldname": "service_detail",
-   "fieldtype": "Link",
+   "fieldtype": "Table",
    "label": "Service Detail",
    "options": "Service Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 16:22:02.102159",
+ "modified": "2023-10-12 17:17:37.902655",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Services Master",
