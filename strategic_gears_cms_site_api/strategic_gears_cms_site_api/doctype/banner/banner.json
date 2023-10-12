@@ -10,9 +10,9 @@
  "field_order": [
   "banner_name",
   "banner_image",
+  "description",
   "sequence",
-  "text",
-  "button_text",
+  "button_enable",
   "button_label",
   "button_url"
  ],
@@ -21,16 +21,6 @@
    "fieldname": "banner_image",
    "fieldtype": "Attach Image",
    "label": "Banner Image"
-  },
-  {
-   "fieldname": "text",
-   "fieldtype": "Text",
-   "label": "Text"
-  },
-  {
-   "fieldname": "button_text",
-   "fieldtype": "Data",
-   "label": "Button Text"
   },
   {
    "fieldname": "button_label",
@@ -52,11 +42,22 @@
    "fieldname": "sequence",
    "fieldtype": "Int",
    "label": "Sequence"
+  },
+  {
+   "default": "0",
+   "fieldname": "button_enable",
+   "fieldtype": "Check",
+   "label": "Button Enable"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 10:33:42.684483",
+ "modified": "2023-10-12 12:57:16.728395",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Banner",
