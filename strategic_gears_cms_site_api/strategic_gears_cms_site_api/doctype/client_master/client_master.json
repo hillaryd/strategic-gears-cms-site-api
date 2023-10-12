@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:client_name",
+ "creation": "2023-10-13 04:47:45.251057",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "client_name",
+  "is_enable",
+  "client_image",
+  "url",
+  "slug"
+ ],
+ "fields": [
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "label": "Client Name",
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_enable",
+   "fieldtype": "Check",
+   "label": "Is Enable"
+  },
+  {
+   "fieldname": "client_image",
+   "fieldtype": "Attach Image",
+   "label": "Client Image"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "URL"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "label": "Slug"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-13 04:51:36.879237",
+ "modified_by": "Administrator",
+ "module": "strategic-gears-cms-site-api",
+ "name": "Client Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
