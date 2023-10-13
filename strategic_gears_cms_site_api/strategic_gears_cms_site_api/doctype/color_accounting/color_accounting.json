@@ -7,8 +7,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "banner_image",
-  "banner_label",
+  "banner",
   "management_consultancy_heading",
   "management_consultancy_subheading",
   "management_consultancy_description",
@@ -25,17 +24,6 @@
   "learning_outcome_image"
  ],
  "fields": [
-  {
-   "fieldname": "banner_image",
-   "fieldtype": "Link",
-   "label": "Banner Image",
-   "options": "Banner"
-  },
-  {
-   "fieldname": "banner_label",
-   "fieldtype": "Data",
-   "label": "Banner Label"
-  },
   {
    "fieldname": "management_consultancy_heading",
    "fieldtype": "Data",
@@ -109,12 +97,18 @@
    "fieldname": "learning_outcome_image",
    "fieldtype": "Attach Image",
    "label": "Learning Outcome Image"
+  },
+  {
+   "fieldname": "banner",
+   "fieldtype": "Link",
+   "label": "Banner ",
+   "options": "Banner"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-13 18:14:17.483475",
+ "modified": "2023-10-13 19:41:57.578772",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Color Accounting",

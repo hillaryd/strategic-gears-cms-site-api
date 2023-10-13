@@ -7,8 +7,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "banner_image",
-  "banner_label",
+  "banner",
   "overview_heading",
   "overview_description",
   "organizational_purpose_and_values",
@@ -22,17 +21,6 @@
   "articles"
  ],
  "fields": [
-  {
-   "fieldname": "banner_image",
-   "fieldtype": "Link",
-   "label": "Banner Image",
-   "options": "Banner"
-  },
-  {
-   "fieldname": "banner_label",
-   "fieldtype": "Data",
-   "label": "Banner Label"
-  },
   {
    "fieldname": "services_heading",
    "fieldtype": "Data",
@@ -92,12 +80,18 @@
    "fieldname": "overview_description",
    "fieldtype": "Long Text",
    "label": "Overview Description"
+  },
+  {
+   "fieldname": "banner",
+   "fieldtype": "Link",
+   "label": "Banner ",
+   "options": "Banner"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-13 18:45:20.736652",
+ "modified": "2023-10-13 19:40:51.857197",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "About Strategic Gears",

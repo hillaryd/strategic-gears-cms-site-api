@@ -52,7 +52,7 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Long Text",
    "label": "Description"
   },
   {
@@ -63,7 +63,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 13:31:17.160014",
+ "modified": "2023-10-13 19:50:17.348577",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Articles",

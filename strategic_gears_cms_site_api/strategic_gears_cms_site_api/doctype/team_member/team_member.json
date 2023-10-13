@@ -12,7 +12,6 @@
   "designation",
   "speciality",
   "description",
-  "sequence",
   "image"
  ],
  "fields": [
@@ -36,13 +35,8 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Long Text",
    "label": "Description"
-  },
-  {
-   "fieldname": "sequence",
-   "fieldtype": "Int",
-   "label": "Sequence"
   },
   {
    "fieldname": "image",
@@ -52,10 +46,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 13:33:18.734921",
+ "modified": "2023-10-13 19:43:58.113359",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
- "name": "Team Master",
+ "name": "Team Member",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

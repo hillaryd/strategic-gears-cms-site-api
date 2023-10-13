@@ -10,9 +10,7 @@
  "field_order": [
   "client_name",
   "is_enable",
-  "client_image",
-  "url",
-  "slug"
+  "client_image"
  ],
  "fields": [
   {
@@ -31,21 +29,11 @@
    "fieldname": "client_image",
    "fieldtype": "Attach Image",
    "label": "Client Image"
-  },
-  {
-   "fieldname": "url",
-   "fieldtype": "Data",
-   "label": "URL"
-  },
-  {
-   "fieldname": "slug",
-   "fieldtype": "Data",
-   "label": "Slug"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-13 04:51:36.879237",
+ "modified": "2023-10-13 19:46:37.495529",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Client Master",

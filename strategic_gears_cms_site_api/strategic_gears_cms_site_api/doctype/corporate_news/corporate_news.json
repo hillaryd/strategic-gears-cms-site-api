@@ -7,32 +7,27 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "banner_image",
-  "banner_label",
+  "banner",
   "corporate_news_articles"
  ],
  "fields": [
-  {
-   "fieldname": "banner_image",
-   "fieldtype": "Attach Image",
-   "label": "Banner Image"
-  },
-  {
-   "fieldname": "banner_label",
-   "fieldtype": "Data",
-   "label": "Banner Label"
-  },
   {
    "fieldname": "corporate_news_articles",
    "fieldtype": "Table",
    "label": "Corporate News Articles",
    "options": "Corporate News Article Details"
+  },
+  {
+   "fieldname": "banner",
+   "fieldtype": "Link",
+   "label": "Banner",
+   "options": "Banner"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-14 06:21:37.178686",
+ "modified": "2023-10-13 19:38:09.759271",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Corporate News",

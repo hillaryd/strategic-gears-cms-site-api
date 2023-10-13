@@ -12,7 +12,7 @@
   "description",
   "service_detail",
   "sequence",
-  "banner_image",
+  "banner",
   "slug"
  ],
  "fields": [
@@ -24,7 +24,7 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Long Text",
    "label": "Description"
   },
   {
@@ -38,21 +38,21 @@
    "label": "Slug"
   },
   {
-   "fieldname": "banner_image",
-   "fieldtype": "Link",
-   "label": "Banner Image",
-   "options": "Banner"
-  },
-  {
    "fieldname": "service_detail",
    "fieldtype": "Table",
    "label": "Service Detail",
    "options": "Service Details"
+  },
+  {
+   "fieldname": "banner",
+   "fieldtype": "Link",
+   "label": "Banner",
+   "options": "Banner"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 17:17:37.902655",
+ "modified": "2023-10-13 19:39:12.809617",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Services Master",

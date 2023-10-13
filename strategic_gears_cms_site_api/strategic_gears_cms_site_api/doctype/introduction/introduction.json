@@ -21,7 +21,7 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Long Text",
    "label": "Description"
   },
   {
@@ -44,7 +44,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-12 16:17:54.320831",
+ "modified": "2023-10-13 19:51:04.951536",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Introduction",

@@ -12,6 +12,7 @@
   "label",
   "enable_category",
   "slug",
+  "column_break_jgqtn",
   "sequence",
   "is_group",
   "old_parent",
@@ -60,11 +61,15 @@
    "fieldname": "parent_category",
    "fieldtype": "Data",
    "label": "Parent Category"
+  },
+  {
+   "fieldname": "column_break_jgqtn",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 13:07:49.823855",
+ "modified": "2023-10-13 19:49:13.554615",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Category",
