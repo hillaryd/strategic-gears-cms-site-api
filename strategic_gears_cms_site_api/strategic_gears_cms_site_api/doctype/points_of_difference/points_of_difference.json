@@ -39,7 +39,7 @@
   },
   {
    "fieldname": "partners_section_subheading",
-   "fieldtype": "Data",
+   "fieldtype": "Long Text",
    "label": "Partners Section Subheading"
   },
   {
@@ -71,7 +71,7 @@
   {
    "fieldname": "understanding_bussiness_section",
    "fieldtype": "Table",
-   "label": "Understanding Bussiness Section",
+   "label": "Bussinesses",
    "options": "Understanding Bussiness Section"
   },
   {
@@ -88,7 +88,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-13 18:36:44.777318",
+ "modified": "2023-10-13 18:45:34.199333",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Points of Difference",
