@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-13 04:54:41.391321",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "banner",
+  "heading",
+  "client_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "banner",
+   "fieldtype": "Link",
+   "label": "Banner",
+   "options": "Banner"
+  },
+  {
+   "fieldname": "heading",
+   "fieldtype": "Data",
+   "label": "Heading"
+  },
+  {
+   "fieldname": "client_details",
+   "fieldtype": "Table",
+   "label": "Client Details",
+   "options": "Client Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-10-12 17:12:27.330167",
+ "modified_by": "Administrator",
+ "module": "strategic-gears-cms-site-api",
+ "name": "Client",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
