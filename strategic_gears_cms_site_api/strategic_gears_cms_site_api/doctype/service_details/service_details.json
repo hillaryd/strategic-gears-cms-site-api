@@ -13,14 +13,13 @@
    "fieldname": "service_detail",
    "fieldtype": "Link",
    "label": "Service Detail ",
-   "options": "Service Details Master",
-   "unique": 1
+   "options": "Service Details Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-13 10:17:40.046251",
+ "modified": "2023-10-13 10:39:34.565079",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Service Details",
