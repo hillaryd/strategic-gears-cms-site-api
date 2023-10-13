@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-13 17:53:23.407014",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "university_image"
+ ],
+ "fields": [
+  {
+   "fieldname": "university_image",
+   "fieldtype": "Attach Image",
+   "label": "University Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-13 17:53:23.407014",
+ "modified_by": "Administrator",
+ "module": "strategic-gears-cms-site-api",
+ "name": "Recognized Universities Images",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
