@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-13 18:07:54.144073",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "banner_image",
+  "banner_label",
+  "management_consultancy_heading",
+  "management_consultancy_subheading",
+  "management_consultancy_description",
+  "background_section_heading",
+  "background_section_subheading",
+  "background_section_description",
+  "industries",
+  "industry_images",
+  "recognized_universities_description",
+  "recognized_universities_images",
+  "learning_outcomes_heading",
+  "learing_outcomes_subheading",
+  "learning_outcome",
+  "learning_outcome_image"
+ ],
+ "fields": [
+  {
+   "fieldname": "banner_image",
+   "fieldtype": "Link",
+   "label": "Banner Image",
+   "options": "Banner"
+  },
+  {
+   "fieldname": "banner_label",
+   "fieldtype": "Data",
+   "label": "Banner Label"
+  },
+  {
+   "fieldname": "management_consultancy_heading",
+   "fieldtype": "Data",
+   "label": "Management Consultancy Heading"
+  },
+  {
+   "fieldname": "management_consultancy_subheading",
+   "fieldtype": "Data",
+   "label": "Management Consultancy Subheading"
+  },
+  {
+   "fieldname": "management_consultancy_description",
+   "fieldtype": "Long Text",
+   "label": "Management Consultancy Description"
+  },
+  {
+   "fieldname": "background_section_heading",
+   "fieldtype": "Data",
+   "label": "Background Section Heading"
+  },
+  {
+   "fieldname": "background_section_subheading",
+   "fieldtype": "Data",
+   "label": "Background Section Subheading"
+  },
+  {
+   "fieldname": "background_section_description",
+   "fieldtype": "Long Text",
+   "label": "Background Section Description"
+  },
+  {
+   "fieldname": "industries",
+   "fieldtype": "Table",
+   "label": "Industries",
+   "options": "Industry"
+  },
+  {
+   "fieldname": "industry_images",
+   "fieldtype": "Table",
+   "label": "Industry Images",
+   "options": "Industry Images"
+  },
+  {
+   "fieldname": "recognized_universities_description",
+   "fieldtype": "Small Text",
+   "label": "Recognized Universities Description"
+  },
+  {
+   "fieldname": "recognized_universities_images",
+   "fieldtype": "Table",
+   "label": "Recognized Universities Images",
+   "options": "Recognized Universities Images"
+  },
+  {
+   "fieldname": "learning_outcomes_heading",
+   "fieldtype": "Data",
+   "label": "Learning Outcomes Heading"
+  },
+  {
+   "fieldname": "learing_outcomes_subheading",
+   "fieldtype": "Text",
+   "label": "Learing Outcomes Subheading"
+  },
+  {
+   "fieldname": "learning_outcome",
+   "fieldtype": "Table",
+   "label": "Learning Outcome",
+   "options": "Learning Outcome"
+  },
+  {
+   "fieldname": "learning_outcome_image",
+   "fieldtype": "Attach Image",
+   "label": "Learning Outcome Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-10-13 18:14:17.483475",
+ "modified_by": "Administrator",
+ "module": "strategic-gears-cms-site-api",
+ "name": "Color Accounting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
