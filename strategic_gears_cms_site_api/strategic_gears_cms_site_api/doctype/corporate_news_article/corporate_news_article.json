@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:article_heading",
+ "creation": "2023-10-14 06:06:21.291406",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "article_heading",
+  "article_description",
+  "article_image",
+  "section_1_heading",
+  "section_1_image",
+  "section_1_description",
+  "section_2_heading",
+  "section_2_image",
+  "section_2_description",
+  "section_3_heading",
+  "section_3_image",
+  "section_3_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "article_heading",
+   "fieldtype": "Data",
+   "label": "Article Heading",
+   "unique": 1
+  },
+  {
+   "fieldname": "article_description",
+   "fieldtype": "Long Text",
+   "label": "Article Description"
+  },
+  {
+   "fieldname": "article_image",
+   "fieldtype": "Attach Image",
+   "label": "Article Image"
+  },
+  {
+   "fieldname": "section_1_heading",
+   "fieldtype": "Data",
+   "label": "Section 1 Heading"
+  },
+  {
+   "fieldname": "section_1_description",
+   "fieldtype": "Long Text",
+   "label": "Section 1 Description"
+  },
+  {
+   "fieldname": "section_2_heading",
+   "fieldtype": "Data",
+   "label": "Section 2 Heading"
+  },
+  {
+   "fieldname": "section_2_description",
+   "fieldtype": "Long Text",
+   "label": "Section 2 Description"
+  },
+  {
+   "fieldname": "section_3_heading",
+   "fieldtype": "Data",
+   "label": "Section 3 Heading"
+  },
+  {
+   "fieldname": "section_3_description",
+   "fieldtype": "Long Text",
+   "label": "Section 3 Description"
+  },
+  {
+   "fieldname": "section_1_image",
+   "fieldtype": "Attach Image",
+   "label": "Section 1 Image"
+  },
+  {
+   "fieldname": "section_2_image",
+   "fieldtype": "Attach Image",
+   "label": "Section 2 Image"
+  },
+  {
+   "fieldname": "section_3_image",
+   "fieldtype": "Attach Image",
+   "label": "Section 3 Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-14 06:33:54.896704",
+ "modified_by": "Administrator",
+ "module": "strategic-gears-cms-site-api",
+ "name": "Corporate News Article",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
