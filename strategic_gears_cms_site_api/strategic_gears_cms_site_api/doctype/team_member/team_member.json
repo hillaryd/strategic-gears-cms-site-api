@@ -20,12 +20,14 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Employee Name",
-   "reqd": 1
+   "reqd": 1,
+   "translatable": 1
   },
   {
    "fieldname": "designation",
    "fieldtype": "Data",
-   "label": "Designation"
+   "label": "Designation",
+   "translatable": 1
   },
   {
    "fieldname": "speciality",
@@ -35,8 +37,9 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Long Text",
-   "label": "Description"
+   "fieldtype": "Text",
+   "label": "Description",
+   "translatable": 1
   },
   {
    "fieldname": "image",
@@ -46,7 +49,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-13 19:43:58.113359",
+ "modified": "2023-10-16 12:15:41.665611",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Team Member",

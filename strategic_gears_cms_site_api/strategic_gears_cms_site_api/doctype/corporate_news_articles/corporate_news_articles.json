@@ -25,12 +25,14 @@
    "fieldname": "article_heading",
    "fieldtype": "Data",
    "label": "Article Heading",
+   "translatable": 1,
    "unique": 1
   },
   {
    "fieldname": "article_description",
-   "fieldtype": "Long Text",
-   "label": "Article Description"
+   "fieldtype": "Text",
+   "label": "Article Description",
+   "translatable": 1
   },
   {
    "fieldname": "article_image",
@@ -40,32 +42,38 @@
   {
    "fieldname": "section_1_heading",
    "fieldtype": "Data",
-   "label": "Section 1 Heading"
+   "label": "Section 1 Heading",
+   "translatable": 1
   },
   {
    "fieldname": "section_1_description",
-   "fieldtype": "Long Text",
-   "label": "Section 1 Description"
+   "fieldtype": "Text",
+   "label": "Section 1 Description",
+   "translatable": 1
   },
   {
    "fieldname": "section_2_heading",
    "fieldtype": "Data",
-   "label": "Section 2 Heading"
+   "label": "Section 2 Heading",
+   "translatable": 1
   },
   {
    "fieldname": "section_2_description",
-   "fieldtype": "Long Text",
-   "label": "Section 2 Description"
+   "fieldtype": "Text",
+   "label": "Section 2 Description",
+   "translatable": 1
   },
   {
    "fieldname": "section_3_heading",
    "fieldtype": "Data",
-   "label": "Section 3 Heading"
+   "label": "Section 3 Heading",
+   "translatable": 1
   },
   {
    "fieldname": "section_3_description",
-   "fieldtype": "Long Text",
-   "label": "Section 3 Description"
+   "fieldtype": "Text",
+   "label": "Section 3 Description",
+   "translatable": 1
   },
   {
    "fieldname": "section_1_image",
@@ -85,7 +93,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-14 06:33:54.896704",
+ "modified": "2023-10-16 12:12:30.947499",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Corporate News Articles",

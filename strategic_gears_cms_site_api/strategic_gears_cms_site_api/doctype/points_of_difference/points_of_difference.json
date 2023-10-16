@@ -23,12 +23,14 @@
   {
    "fieldname": "partners_section_heading",
    "fieldtype": "Data",
-   "label": "Partners Section Heading"
+   "label": "Partners Section Heading",
+   "translatable": 1
   },
   {
    "fieldname": "partners_section_subheading",
-   "fieldtype": "Long Text",
-   "label": "Partners Section Subheading"
+   "fieldtype": "Text",
+   "label": "Partners Section Subheading",
+   "translatable": 1
   },
   {
    "fieldname": "partners_section_image",
@@ -39,22 +41,26 @@
   {
    "fieldname": "resource_management_section_heading",
    "fieldtype": "Data",
-   "label": "Resource Management Section Heading"
+   "label": "Resource Management Section Heading",
+   "translatable": 1
   },
   {
    "fieldname": "resource_management_section_description",
-   "fieldtype": "Long Text",
-   "label": "Resource Management Section Description"
+   "fieldtype": "Text",
+   "label": "Resource Management Section Description",
+   "translatable": 1
   },
   {
    "fieldname": "frameworks_heading",
    "fieldtype": "Data",
-   "label": "Frameworks Heading"
+   "label": "Frameworks Heading",
+   "translatable": 1
   },
   {
    "fieldname": "frameworks_description",
-   "fieldtype": "Long Text",
-   "label": "Frameworks Description"
+   "fieldtype": "Text",
+   "label": "Frameworks Description",
+   "translatable": 1
   },
   {
    "fieldname": "understanding_bussiness_section",
@@ -65,12 +71,14 @@
   {
    "fieldname": "understanding_bussiness_section_heading",
    "fieldtype": "Data",
-   "label": "Understanding Bussiness Section Heading"
+   "label": "Understanding Bussiness Section Heading",
+   "translatable": 1
   },
   {
    "fieldname": "understanding_bussiness_section_description",
-   "fieldtype": "Long Text",
-   "label": "Understanding Bussiness Section Description "
+   "fieldtype": "Text",
+   "label": "Understanding Bussiness Section Description ",
+   "translatable": 1
   },
   {
    "fieldname": "banner",
@@ -82,7 +90,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-16 10:05:41.273037",
+ "modified": "2023-10-16 12:10:28.906461",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Points of Difference",

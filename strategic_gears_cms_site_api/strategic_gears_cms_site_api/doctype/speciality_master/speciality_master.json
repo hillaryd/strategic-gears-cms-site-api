@@ -15,12 +15,13 @@
    "fieldname": "speciality_name",
    "fieldtype": "Data",
    "label": "Speciality Name",
+   "translatable": 1,
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 13:14:08.081020",
+ "modified": "2023-10-16 12:22:36.967751",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Speciality Master",

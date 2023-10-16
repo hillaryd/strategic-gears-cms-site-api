@@ -27,32 +27,38 @@
   {
    "fieldname": "management_consultancy_heading",
    "fieldtype": "Data",
-   "label": "Management Consultancy Heading"
+   "label": "Management Consultancy Heading",
+   "translatable": 1
   },
   {
    "fieldname": "management_consultancy_subheading",
    "fieldtype": "Data",
-   "label": "Management Consultancy Subheading"
+   "label": "Management Consultancy Subheading",
+   "translatable": 1
   },
   {
    "fieldname": "management_consultancy_description",
-   "fieldtype": "Long Text",
-   "label": "Management Consultancy Description"
+   "fieldtype": "Text",
+   "label": "Management Consultancy Description",
+   "translatable": 1
   },
   {
    "fieldname": "background_section_heading",
    "fieldtype": "Data",
-   "label": "Background Section Heading"
+   "label": "Background Section Heading",
+   "translatable": 1
   },
   {
    "fieldname": "background_section_subheading",
    "fieldtype": "Data",
-   "label": "Background Section Subheading"
+   "label": "Background Section Subheading",
+   "translatable": 1
   },
   {
    "fieldname": "background_section_description",
-   "fieldtype": "Long Text",
-   "label": "Background Section Description"
+   "fieldtype": "Text",
+   "label": "Background Section Description",
+   "translatable": 1
   },
   {
    "fieldname": "industries",
@@ -69,7 +75,8 @@
   {
    "fieldname": "recognized_universities_description",
    "fieldtype": "Small Text",
-   "label": "Recognized Universities Description"
+   "label": "Recognized Universities Description",
+   "translatable": 1
   },
   {
    "fieldname": "recognized_universities_images",
@@ -80,12 +87,14 @@
   {
    "fieldname": "learning_outcomes_heading",
    "fieldtype": "Data",
-   "label": "Learning Outcomes Heading"
+   "label": "Learning Outcomes Heading",
+   "translatable": 1
   },
   {
    "fieldname": "learing_outcomes_subheading",
    "fieldtype": "Text",
-   "label": "Learing Outcomes Subheading"
+   "label": "Learing Outcomes Subheading",
+   "translatable": 1
   },
   {
    "fieldname": "learning_outcome",
@@ -108,7 +117,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-13 19:41:57.578772",
+ "modified": "2023-10-16 12:16:48.523785",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Color Accounting",

@@ -16,17 +16,19 @@
    "fieldname": "heading",
    "fieldtype": "Data",
    "label": "Heading",
+   "translatable": 1,
    "unique": 1
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text Editor",
-   "label": "Description"
+   "fieldtype": "Text",
+   "label": "Description",
+   "translatable": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 16:11:46.487832",
+ "modified": "2023-10-16 12:21:42.979964",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Service Details Master",

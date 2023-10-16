@@ -1,45 +1,46 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:banner_name",
- "creation": "2023-10-11 17:41:47.162810",
+ "autoname": "format:EMP-{employee_name}-{####}",
+ "creation": "2023-10-12 13:04:12.455912",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "banner_name",
-  "banner_image",
+  "employee_name",
+  "designation",
+  "speciality",
   "description",
   "sequence",
-  "button_enable",
-  "button_label",
-  "button_url"
+  "image"
  ],
  "fields": [
   {
-   "fieldname": "banner_image",
-   "fieldtype": "Attach Image",
-   "label": "Banner Image"
-  },
-  {
-   "fieldname": "button_label",
+   "fieldname": "employee_name",
    "fieldtype": "Data",
-   "label": "Button Label",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "reqd": 1,
    "translatable": 1
   },
   {
-   "fieldname": "button_url",
+   "fieldname": "designation",
    "fieldtype": "Data",
-   "label": "Button URL",
+   "label": "Designation",
    "translatable": 1
   },
   {
-   "fieldname": "banner_name",
-   "fieldtype": "Data",
-   "label": "Banner Name",
-   "translatable": 1,
-   "unique": 1
+   "fieldname": "speciality",
+   "fieldtype": "Table",
+   "label": "Speciality",
+   "options": "Speciality Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description",
+   "translatable": 1
   },
   {
    "fieldname": "sequence",
@@ -47,25 +48,18 @@
    "label": "Sequence"
   },
   {
-   "default": "0",
-   "fieldname": "button_enable",
-   "fieldtype": "Check",
-   "label": "Button Enable"
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Text",
-   "label": "Description",
-   "translatable": 1
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 12:15:05.290994",
+ "modified": "2023-10-16 12:22:07.179434",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
- "name": "Banner",
- "naming_rule": "By fieldname",
+ "name": "Team Master",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
