@@ -72,7 +72,7 @@
   {
    "fieldname": "overview_heading",
    "fieldtype": "Data",
-   "label": "Overview Heading",
+   "label": "Overview Heading ",
    "translatable": 1
   },
   {
@@ -97,7 +97,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-16 12:06:59.517209",
+ "modified": "2023-10-16 12:52:53.743462",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "About Strategic Gears",
