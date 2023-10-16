@@ -19,6 +19,7 @@
    "fieldname": "newsletter_name",
    "fieldtype": "Data",
    "label": "Newsletter Name",
+   "translatable": 1,
    "unique": 1
   },
   {
@@ -33,18 +34,20 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Long Text",
-   "label": "Description"
+   "fieldtype": "Text",
+   "label": "Description",
+   "translatable": 1
   },
   {
    "fieldname": "button_label",
    "fieldtype": "Data",
-   "label": "Button Label"
+   "label": "Button Label",
+   "translatable": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-13 19:49:33.905566",
+ "modified": "2023-10-16 12:13:40.990504",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "NewsLetters Master",

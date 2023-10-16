@@ -24,7 +24,8 @@
   {
    "fieldname": "services_heading",
    "fieldtype": "Data",
-   "label": "Services Heading"
+   "label": "Services Heading",
+   "translatable": 1
   },
   {
    "fieldname": "services_list",
@@ -35,12 +36,14 @@
   {
    "fieldname": "why_choose_us_heading",
    "fieldtype": "Data",
-   "label": "Why Choose Us Heading"
+   "label": "Why Choose Us Heading",
+   "translatable": 1
   },
   {
    "fieldname": "why_choose_us_sub_heading",
    "fieldtype": "Data",
-   "label": "Why Choose Us Sub Heading"
+   "label": "Why Choose Us Sub Heading",
+   "translatable": 1
   },
   {
    "fieldname": "organizational_purpose_and_values",
@@ -69,17 +72,20 @@
   {
    "fieldname": "overview_heading",
    "fieldtype": "Data",
-   "label": "Overview Heading"
+   "label": "Overview Heading",
+   "translatable": 1
   },
   {
    "fieldname": "services_sub_heading",
    "fieldtype": "Text",
-   "label": "Services Description"
+   "label": "Services Description",
+   "translatable": 1
   },
   {
    "fieldname": "overview_description",
-   "fieldtype": "Long Text",
-   "label": "Overview Description"
+   "fieldtype": "Text",
+   "label": "Overview Description",
+   "translatable": 1
   },
   {
    "fieldname": "banner",
@@ -91,7 +97,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-16 09:32:32.928381",
+ "modified": "2023-10-16 12:06:59.517209",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "About Strategic Gears",

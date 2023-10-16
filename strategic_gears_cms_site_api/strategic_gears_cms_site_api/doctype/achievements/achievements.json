@@ -13,8 +13,9 @@
  "fields": [
   {
    "fieldname": "description",
-   "fieldtype": "Long Text",
-   "label": "Description"
+   "fieldtype": "Text",
+   "label": "Description",
+   "translatable": 1
   },
   {
    "fieldname": "achievement_details",
@@ -26,7 +27,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-13 19:48:44.143014",
+ "modified": "2023-10-16 12:14:29.190363",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Achievements",

@@ -23,12 +23,14 @@
    "fieldname": "category_name",
    "fieldtype": "Data",
    "label": "Category Name",
+   "translatable": 1,
    "unique": 1
   },
   {
    "fieldname": "label",
    "fieldtype": "Data",
-   "label": "Label"
+   "label": "Label",
+   "translatable": 1
   },
   {
    "default": "0",
@@ -39,7 +41,8 @@
   {
    "fieldname": "slug",
    "fieldtype": "Data",
-   "label": "Slug"
+   "label": "Slug",
+   "translatable": 1
   },
   {
    "fieldname": "sequence",
@@ -55,12 +58,14 @@
   {
    "fieldname": "old_parent",
    "fieldtype": "Data",
-   "label": "Old Parent"
+   "label": "Old Parent",
+   "translatable": 1
   },
   {
    "fieldname": "parent_category",
    "fieldtype": "Data",
-   "label": "Parent Category"
+   "label": "Parent Category",
+   "translatable": 1
   },
   {
    "fieldname": "column_break_jgqtn",
@@ -69,7 +74,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-13 19:49:13.554615",
+ "modified": "2023-10-16 12:14:06.316575",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Category",

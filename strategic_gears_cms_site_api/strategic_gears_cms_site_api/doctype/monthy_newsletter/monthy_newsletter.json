@@ -21,7 +21,8 @@
   {
    "fieldname": "heading",
    "fieldtype": "Data",
-   "label": "Heading "
+   "label": "Heading ",
+   "translatable": 1
   },
   {
    "fieldname": "newesletter_master_table",
@@ -33,7 +34,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-16 10:36:26.726249",
+ "modified": "2023-10-16 12:08:22.276379",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Monthy NewsLetter",

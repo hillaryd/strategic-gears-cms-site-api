@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:heading",
  "creation": "2023-10-16 10:29:39.530714",
  "default_view": "List",
  "doctype": "DocType",
@@ -17,12 +18,15 @@
   {
    "fieldname": "heading",
    "fieldtype": "Data",
-   "label": "Heading"
+   "label": "Heading",
+   "translatable": 1,
+   "unique": 1
   },
   {
    "fieldname": "description",
-   "fieldtype": "Long Text",
-   "label": "Description"
+   "fieldtype": "Text",
+   "label": "Description",
+   "translatable": 1
   },
   {
    "fieldname": "image",
@@ -43,10 +47,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 10:31:20.206352",
+ "modified": "2023-10-16 12:07:16.620063",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Reports Master",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

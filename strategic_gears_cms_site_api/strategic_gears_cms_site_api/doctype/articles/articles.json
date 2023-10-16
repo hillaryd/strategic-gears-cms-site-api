@@ -23,12 +23,14 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Article Name",
-   "reqd": 1
+   "reqd": 1,
+   "translatable": 1
   },
   {
    "fieldname": "article_heading",
    "fieldtype": "Data",
-   "label": "Article Heading"
+   "label": "Article Heading",
+   "translatable": 1
   },
   {
    "fieldname": "image",
@@ -43,7 +45,8 @@
   {
    "fieldname": "article_url",
    "fieldtype": "Data",
-   "label": "Article Url"
+   "label": "Article Url",
+   "translatable": 1
   },
   {
    "fieldname": "date",
@@ -52,18 +55,20 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Long Text",
-   "label": "Description"
+   "fieldtype": "Text",
+   "label": "Description",
+   "translatable": 1
   },
   {
    "fieldname": "slug",
    "fieldtype": "Data",
-   "label": "Slug"
+   "label": "Slug",
+   "translatable": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-13 19:50:17.348577",
+ "modified": "2023-10-16 12:28:15.363781",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Articles",

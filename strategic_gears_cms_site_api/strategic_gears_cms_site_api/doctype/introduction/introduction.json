@@ -17,12 +17,14 @@
   {
    "fieldname": "heading",
    "fieldtype": "Data",
-   "label": "Heading"
+   "label": "Heading",
+   "translatable": 1
   },
   {
    "fieldname": "description",
-   "fieldtype": "Long Text",
-   "label": "Description"
+   "fieldtype": "Text",
+   "label": "Description",
+   "translatable": 1
   },
   {
    "default": "0",
@@ -33,18 +35,20 @@
   {
    "fieldname": "button_label",
    "fieldtype": "Data",
-   "label": "Button label"
+   "label": "Button label",
+   "translatable": 1
   },
   {
    "fieldname": "button_url",
    "fieldtype": "Data",
-   "label": "Button Url"
+   "label": "Button Url",
+   "translatable": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-13 19:51:04.951536",
+ "modified": "2023-10-16 12:11:15.983555",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Introduction",

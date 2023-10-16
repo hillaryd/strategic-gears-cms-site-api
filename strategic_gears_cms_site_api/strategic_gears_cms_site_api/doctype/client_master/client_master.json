@@ -17,6 +17,7 @@
    "fieldname": "client_name",
    "fieldtype": "Data",
    "label": "Client Name",
+   "translatable": 1,
    "unique": 1
   },
   {
@@ -33,7 +34,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-13 19:46:37.495529",
+ "modified": "2023-10-16 12:15:23.975906",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Client Master",
