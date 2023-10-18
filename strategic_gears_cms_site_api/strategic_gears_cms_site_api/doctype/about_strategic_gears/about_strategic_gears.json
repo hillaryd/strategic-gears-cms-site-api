@@ -31,7 +31,7 @@
    "fieldname": "services_list",
    "fieldtype": "Table",
    "label": "Services List",
-   "options": "Service Details"
+   "options": "Services List for About Page"
   },
   {
    "fieldname": "why_choose_us_heading",
@@ -97,7 +97,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-16 12:52:53.743462",
+ "modified": "2023-10-18 13:10:12.618476",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "About Strategic Gears",
