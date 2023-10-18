@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:speciality_name",
  "creation": "2023-10-12 13:14:08.081020",
@@ -21,7 +22,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 12:22:36.967751",
+ "modified": "2023-10-18 13:49:07.892416",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Speciality Master",

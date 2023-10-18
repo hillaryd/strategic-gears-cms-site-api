@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:newsletter_name",
  "creation": "2023-10-12 12:56:55.166880",
@@ -47,7 +48,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 12:13:40.990504",
+ "modified": "2023-10-18 13:54:12.642933",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "NewsLetters Master",

@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:article_heading",
  "creation": "2023-10-14 06:06:21.291406",
@@ -93,7 +94,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 12:12:30.947499",
+ "modified": "2023-10-18 13:50:12.026252",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Corporate News Articles",

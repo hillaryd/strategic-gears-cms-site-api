@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:EMP-{employee_name}-{####}",
  "creation": "2023-10-12 13:04:12.455912",
@@ -49,7 +50,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 12:15:41.665611",
+ "modified": "2023-10-18 13:51:44.603107",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Team Member",

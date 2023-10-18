@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-13 17:41:53.065683",
+ "creation": "2023-10-18 13:58:12.741355",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -22,9 +22,39 @@
  ],
  "fields": [
   {
+   "fieldname": "banner",
+   "fieldtype": "Link",
+   "label": "Banner ",
+   "options": "Banner"
+  },
+  {
+   "fieldname": "overview_heading",
+   "fieldtype": "Data",
+   "label": "Overview Heading ",
+   "translatable": 1
+  },
+  {
+   "fieldname": "overview_description",
+   "fieldtype": "Text",
+   "label": "Overview Description",
+   "translatable": 1
+  },
+  {
+   "fieldname": "organizational_purpose_and_values",
+   "fieldtype": "Table",
+   "label": "Organizational Purpose and Values",
+   "options": "Organizational Purpose and Values"
+  },
+  {
    "fieldname": "services_heading",
    "fieldtype": "Data",
    "label": "Services Heading",
+   "translatable": 1
+  },
+  {
+   "fieldname": "services_sub_heading",
+   "fieldtype": "Text",
+   "label": "Services Description",
    "translatable": 1
   },
   {
@@ -46,12 +76,6 @@
    "translatable": 1
   },
   {
-   "fieldname": "organizational_purpose_and_values",
-   "fieldtype": "Table",
-   "label": "Organizational Purpose and Values",
-   "options": "Organizational Purpose and Values"
-  },
-  {
    "fieldname": "reasons_to_choose_us",
    "fieldtype": "Table",
    "label": "Reasons To Choose Us",
@@ -68,36 +92,12 @@
    "fieldtype": "Table",
    "label": "Articles",
    "options": "Article Details"
-  },
-  {
-   "fieldname": "overview_heading",
-   "fieldtype": "Data",
-   "label": "Overview Heading ",
-   "translatable": 1
-  },
-  {
-   "fieldname": "services_sub_heading",
-   "fieldtype": "Text",
-   "label": "Services Description",
-   "translatable": 1
-  },
-  {
-   "fieldname": "overview_description",
-   "fieldtype": "Text",
-   "label": "Overview Description",
-   "translatable": 1
-  },
-  {
-   "fieldname": "banner",
-   "fieldtype": "Link",
-   "label": "Banner ",
-   "options": "Banner"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-18 13:10:12.618476",
+ "modified": "2023-10-18 13:58:20.754630",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "About Strategic Gears",

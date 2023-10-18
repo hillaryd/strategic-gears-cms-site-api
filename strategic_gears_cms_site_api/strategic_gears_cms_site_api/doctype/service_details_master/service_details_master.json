@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:heading",
  "creation": "2023-10-12 16:11:24.648794",
@@ -28,7 +29,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 12:21:42.979964",
+ "modified": "2023-10-18 13:50:52.401162",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Service Details Master",

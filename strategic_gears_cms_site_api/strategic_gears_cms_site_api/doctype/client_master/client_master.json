@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:client_name",
  "creation": "2023-10-13 04:47:45.251057",
@@ -34,7 +35,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 12:15:23.975906",
+ "modified": "2023-10-18 13:53:45.383723",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Client Master",
