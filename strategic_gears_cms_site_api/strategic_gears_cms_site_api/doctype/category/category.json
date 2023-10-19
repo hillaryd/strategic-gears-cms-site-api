@@ -59,15 +59,15 @@
   },
   {
    "fieldname": "old_parent",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Old Parent",
-   "translatable": 1
+   "options": "Category"
   },
   {
    "fieldname": "parent_category",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Parent Category",
-   "translatable": 1
+   "options": "Category"
   },
   {
    "fieldname": "column_break_jgqtn",
@@ -81,7 +81,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-19 16:26:11.017865",
+ "modified": "2023-10-19 18:08:35.347163",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Category",

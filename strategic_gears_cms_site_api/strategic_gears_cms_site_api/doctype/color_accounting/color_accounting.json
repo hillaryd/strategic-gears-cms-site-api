@@ -19,7 +19,7 @@
   "recognized_universities_description",
   "recognized_universities_images",
   "learning_outcomes_heading",
-  "learing_outcomes_subheading",
+  "learning_outcomes_subheading",
   "learning_outcome",
   "learning_outcome_image"
  ],
@@ -91,12 +91,6 @@
    "translatable": 1
   },
   {
-   "fieldname": "learing_outcomes_subheading",
-   "fieldtype": "Text",
-   "label": "Learing Outcomes Subheading",
-   "translatable": 1
-  },
-  {
    "fieldname": "learning_outcome",
    "fieldtype": "Table",
    "label": "Learning Outcome",
@@ -112,12 +106,18 @@
    "fieldtype": "Link",
    "label": "Banner ",
    "options": "Banner"
+  },
+  {
+   "fieldname": "learning_outcomes_subheading",
+   "fieldtype": "Text",
+   "label": "Learing Outcomes Subheading",
+   "translatable": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-18 13:47:18.635723",
+ "modified": "2023-10-19 18:02:27.496155",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Color Accounting",

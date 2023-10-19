@@ -6,19 +6,25 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "industry_image"
+  "industry_image",
+  "sequence"
  ],
  "fields": [
   {
    "fieldname": "industry_image",
    "fieldtype": "Attach Image",
    "label": "Industry Image"
+  },
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "label": "Sequence"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-16 12:19:06.789502",
+ "modified": "2023-10-19 18:00:20.688832",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Industry Images",

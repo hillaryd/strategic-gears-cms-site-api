@@ -2,7 +2,7 @@ import frappe
 from strategic_gears_cms_site_api.utils import success_response, error_response
 
 @frappe.whitelist(allow_guest=True)
-def get_pod(**kwargs):
+def get_pod(kwargs):
     try:
         data={}
         doc=frappe.get_doc("Points of Difference")
