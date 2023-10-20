@@ -8,6 +8,7 @@ import strategic_gears_cms_site_api.api.v1.team_member as team_member
 import strategic_gears_cms_site_api.api.v1.client as client
 import strategic_gears_cms_site_api.api.v1.point_of_difference as point_of_difference
 import strategic_gears_cms_site_api.api.v1.color_accounting as color_accounting
+import strategic_gears_cms_site_api.api.v1.report_list as report_list
 
 class V1():
     def __init__(self):
@@ -19,7 +20,8 @@ class V1():
             'team_member':['get_team_member'],
             'client':['get_client'],
             'point_of_difference':['get_pod'],
-            'color_accounting':['get_color_accounting']
+            'color_accounting':['get_color_accounting'],
+            'report_list':['get_report_data','report_details']
         }
 
     def class_map(self, kwargs):
