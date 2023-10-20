@@ -1,23 +1,13 @@
 import frappe
 from strategic_gears_cms_site_api.utils import success_response, error_response
 import strategic_gears_cms_site_api.api.v1.access_token as access_token
-import strategic_gears_cms_site_api.api.v1.about_strategic_gears as about_strategic_gears
-import strategic_gears_cms_site_api.api.v1.navbar as navbar
-import strategic_gears_cms_site_api.api.v1.team_member as team_member
-import strategic_gears_cms_site_api.api.v1.client as client
-import strategic_gears_cms_site_api.api.v1.point_of_difference as point_of_difference
-import strategic_gears_cms_site_api.api.v1.color_accounting as color_accounting
+
+
 
 class V1():
     def __init__(self):
         self.methods = {
-            'access_token':['get_access_token'],
-            'about_strategic_gears':['get_about_strategic_gears'],
-            'navbar':['get_navbar_data'],
-            'team_member':['get_team_member'],
-            'client':['get_client'],
-            'point_of_difference':['get_pod'],
-            'color_accounting':['get_color_accounting']
+            'access_token':['get_access_token']
         }
 
     def class_map(self, kwargs):
