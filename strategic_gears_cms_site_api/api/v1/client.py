@@ -5,7 +5,6 @@ from strategic_gears_cms_site_api.utils import success_response, error_response
 def get_client(kwargs):
     try:
         doc = frappe.get_doc("Client")
-        #name = doc.banner
         banner_data_list = frappe.get_all("Banner",filters={"banner_name":"OUR CLIENTS"},fields=["banner_name","banner_image"])
         banner_data = banner_data_list[0]
         clients = frappe.get_all("Client Details",pluck="client_name") 
@@ -21,9 +20,7 @@ def get_client(kwargs):
                 else:
                     client_data.append(i)
         removeNestings(client_data_list)
-        print(client_data)
         data={"banner_data":banner_data,"client_data":client_data}
-        print(data)
         return success_response(data)
     except Exception as e:
         frappe.logger("Client").exception(e)

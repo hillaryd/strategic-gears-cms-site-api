@@ -6,7 +6,6 @@ def get_pod(kwargs):
     try:
         data={}
         doc=frappe.get_doc("Points of Difference")
-        print(doc) 
         banner_list=frappe.db.get_list("Banner",filters={"name":doc.banner},fields=["banner_name","banner_image"]) 
         banner = banner_list[0]
         data["banner_data"]=banner
@@ -18,7 +17,7 @@ def get_pod(kwargs):
             "partners_imgs": image
         }
     
-        data["resource_data"] = {  # Fixed the syntax here (colon instead of equal sign)
+        data["resource_data"] = {  
             "resource_heading": doc.partners_section_heading,
             "resource_description": doc.resource_management_section_description
         }

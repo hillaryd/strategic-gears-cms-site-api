@@ -2,7 +2,7 @@ import frappe
 from strategic_gears_cms_site_api.utils import success_response, error_response
 
 @frappe.whitelist(allow_guest=True)
-def get_report_data(kwargs):
+def get_report_list(kwargs):
     try:
         reports = frappe.get_all("Reports Master", fields=["name", "banner", "heading", "image"])
         data_req = {

@@ -1,6 +1,7 @@
 import frappe
 from strategic_gears_cms_site_api.utils import success_response, error_response
 
+@frappe.whitelist(allow_guest=True)
 def get_about_strategic_gears(kwargs):
     try:
         data = {}
@@ -32,9 +33,9 @@ def get_about_strategic_gears(kwargs):
         data['services_data']['services_list'] = []
 
         for item in doc.services_list:
-            service_data = frappe.db.get_list('Service Details',
+            service_data = frappe.get_all('Service Details',
                                     filters={'parent': item.services_list},
-                                    fields=['service_detail']
+                                    fields=['service_detail'],
                                     )
             service_values = []
             for service_value in service_data:

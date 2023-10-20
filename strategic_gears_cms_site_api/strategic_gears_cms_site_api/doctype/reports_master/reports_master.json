@@ -9,6 +9,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "banner",
   "heading",
   "description",
   "image",
@@ -44,11 +45,17 @@
    "fieldtype": "Table",
    "label": "Other Publications For Reports",
    "options": "Other Publications For Reports"
+  },
+  {
+   "fieldname": "banner",
+   "fieldtype": "Link",
+   "label": "Banner",
+   "options": "Banner"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-18 13:49:33.540567",
+ "modified": "2023-10-20 16:27:00.548559",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Reports Master",
