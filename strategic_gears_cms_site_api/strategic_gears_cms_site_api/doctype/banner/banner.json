@@ -10,7 +10,8 @@
  "engine": "InnoDB",
  "field_order": [
   "banner_name",
-  "banner_image",
+  "banner_text_image",
+  "banner_background_image",
   "description",
   "sequence",
   "button_enable",
@@ -18,11 +19,6 @@
   "button_url"
  ],
  "fields": [
-  {
-   "fieldname": "banner_image",
-   "fieldtype": "Attach Image",
-   "label": "Banner Image"
-  },
   {
    "fieldname": "button_label",
    "fieldtype": "Data",
@@ -58,11 +54,21 @@
    "fieldtype": "Text",
    "label": "Description",
    "translatable": 1
+  },
+  {
+   "fieldname": "banner_text_image",
+   "fieldtype": "Attach Image",
+   "label": "Banner Text Image"
+  },
+  {
+   "fieldname": "banner_background_image",
+   "fieldtype": "Attach Image",
+   "label": "Banner Background Image"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-21 00:53:19.752024",
+ "modified": "2023-10-25 09:53:50.762065",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Banner",

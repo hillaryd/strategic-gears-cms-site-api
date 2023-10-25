@@ -8,7 +8,7 @@ import strategic_gears_cms_site_api.api.v1.team_member as team_member
 import strategic_gears_cms_site_api.api.v1.client as client
 import strategic_gears_cms_site_api.api.v1.point_of_difference as point_of_difference
 import strategic_gears_cms_site_api.api.v1.color_accounting as color_accounting
-import strategic_gears_cms_site_api.api.v1.service_details as service_details
+import strategic_gears_cms_site_api.api.v1.services as services
 import strategic_gears_cms_site_api.api.v1.newsletter as newsletter
 import strategic_gears_cms_site_api.api.v1.report as report
 
@@ -25,7 +25,7 @@ class V1():
             'client':['get_client'],
             'point_of_difference':['get_pod'],
             'color_accounting':['get_color_accounting'],
-            'service_details':['get_service_details'],
+            'services':['get_service_details','get_service_list'],
             'newsletter':['get_newsletter'],
             'report':['get_report_list','report_details']
         }
