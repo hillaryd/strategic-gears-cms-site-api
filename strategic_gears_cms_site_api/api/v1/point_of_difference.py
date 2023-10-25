@@ -6,7 +6,7 @@ def get_pod(kwargs):
     try:
         data={}
         doc=frappe.get_doc("Points of Difference")
-        banner_list=frappe.db.get_list("Banner",filters={"name":doc.banner},fields=["banner_name","banner_image"]) 
+        banner_list=frappe.db.get_list("Banner",filters={"name":doc.banner},fields=["banner_name","banner_text_image","banner_background_image"]) 
         banner = banner_list[0]
         data["banner_data"]=banner
 

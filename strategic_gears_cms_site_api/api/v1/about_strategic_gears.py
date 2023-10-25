@@ -8,7 +8,7 @@ def get_about_strategic_gears(kwargs):
         doc = frappe.get_doc('About Strategic Gears')
         banner_data = frappe.db.get_list('Banner',
                                     filters={'name': doc.banner},
-                                    fields=['banner_name', 'banner_image']
+                                    fields=['banner_name','banner_text_image','banner_background_image']
                                     )
         data['banner_data'] = banner_data[0]
         

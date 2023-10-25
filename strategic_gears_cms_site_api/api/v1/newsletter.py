@@ -7,9 +7,9 @@ def get_newsletter(kwargs):
         data={}
         doc=frappe.get_doc("Monthy NewsLetter")
 
-        banner_list=frappe.db.get_list("Banner",filters={"name":doc.banner},fields=["description","banner_image"]) 
+        banner_list=frappe.db.get_list("Banner",filters={"name":doc.banner},fields=["banner_name","banner_text_image","banner_background_image"]) 
         banner = banner_list[0]
-        data["banner_data"]={"banner_text":banner["description"],"banner_image":banner["banner_image"]}
+        data["banner_data"]={"banner_name":banner["banner_name"],"banner_text_image":banner["banner_text_image"],"banner_background_image":banner['banner_background_image']}
         
         data["newsletters_list"]=[]
         for item in doc.newesletter_master_table:

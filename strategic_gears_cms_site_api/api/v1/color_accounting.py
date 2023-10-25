@@ -5,7 +5,7 @@ from strategic_gears_cms_site_api.utils import success_response, error_response
 def get_color_accounting(kwargs):
     try:
         color_accounting = frappe.get_doc("Color Accounting")
-        banner_data = frappe.get_all("Banner",filters={"banner_name":"COLOR ACCOUNTING LEARNING SYSTEM"},fields=["banner_name","banner_image"])
+        banner_data = frappe.get_all("Banner",filters={"banner_name":"COLOR ACCOUNTING LEARNING SYSTEM"},fields=["banner_name","banner_background_image","banner_text_image"])
         consultancy_heading = color_accounting.management_consultancy_heading
         consultancy_subheading = color_accounting.management_consultancy_subheading
         consultancy_description = color_accounting.management_consultancy_description

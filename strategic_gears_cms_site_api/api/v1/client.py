@@ -5,7 +5,7 @@ from strategic_gears_cms_site_api.utils import success_response, error_response
 def get_client(kwargs):
     try:
         doc = frappe.get_doc("Client")
-        banner_data_list = frappe.get_all("Banner",filters={"banner_name":"OUR CLIENTS"},fields=["banner_name","banner_image"])
+        banner_data_list = frappe.get_all("Banner",filters={"banner_name":"OUR CLIENTS"},fields=["banner_name","banner_text_image","banner_background_image"])
         banner_data = banner_data_list[0]
         clients = frappe.get_all("Client Details",pluck="client_name") 
         client_data_list = []

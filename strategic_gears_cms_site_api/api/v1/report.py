@@ -7,15 +7,15 @@ def get_report_list(kwargs):
         reports = frappe.get_all("Reports Master", fields=["name", "banner", "heading", "image"])
         data_req = {
             "banner_data": {
-                "banner_text": "",
-                "banner_img": ""
+                "banner_name": "",
             },
             "reports_list": []
         }
 
         banner_field = frappe.get_doc("Banner", reports[0].banner)
-        data_req["banner_data"]["banner_text"] = banner_field.banner_name
-        data_req["banner_data"]["banner_img"] = banner_field.banner_image
+        data_req["banner_data"]["banner_name"] = banner_field.banner_name
+        data_req["banner_data"]["banner_text_image"] = banner_field.banner_text_image
+        data_req["banner_data"]["banner_background_image"] = banner_field.banner_background_image
 
         for report in reports:
             report_info = {
