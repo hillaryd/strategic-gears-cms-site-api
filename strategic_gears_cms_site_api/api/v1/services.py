@@ -10,8 +10,9 @@ def get_service_list(kwargs):
         details = []
         service_list=[]
         for service in services:
-            banner = frappe.get_list("Banner",filters={"name":service},fields=["banner_name","banner_text_image","banner_background_image"])
+            banner = frappe.get_list("Banner",filters={"name":service},fields=["banner_background_image","banner_name"])
             for b in banner:
+                print("BANER",b)
                 banner_data = b
             service_details_list = frappe.get_all("Service Details",filters={"parent":service},pluck="service_detail",order_by = 'sequence')
             service_detail = []
@@ -21,7 +22,7 @@ def get_service_list(kwargs):
             service_desc = frappe.get_list("Services Master",filters={"name":service},pluck="description",order_by = 'sequence')
             for service in service_desc:
                 desc = service
-            details = {"banner_data":banner_data,"description":desc,"services_list":service_detail}
+            details = {"name":banner_data["banner_name"],"banner_image":banner_data["banner_background_image"],"services_list":service_detail}
            
             data.append(details)
         return success_response(data)
