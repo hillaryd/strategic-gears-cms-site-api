@@ -11,6 +11,7 @@ import strategic_gears_cms_site_api.api.v1.color_accounting as color_accounting
 import strategic_gears_cms_site_api.api.v1.services as services
 import strategic_gears_cms_site_api.api.v1.newsletter as newsletter
 import strategic_gears_cms_site_api.api.v1.report as report
+import strategic_gears_cms_site_api.api.v1.corporate_news as corporate_news
 
 
 
@@ -27,7 +28,8 @@ class V1():
             'color_accounting':['get_color_accounting'],
             'services':['get_service_details','get_service_list'],
             'newsletter':['get_newsletter'],
-            'report':['get_report_list','report_details']
+            'report':['get_report_list','report_details'],
+            'corporate_news':['get_corporate_news_data','get_corporate_news_article_details'],
         }
 
     def class_map(self, kwargs):
