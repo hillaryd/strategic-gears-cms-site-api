@@ -15,6 +15,7 @@
   "slug",
   "custom_url",
   "column_break_jgqtn",
+  "redirect_to_external_website",
   "sequence",
   "is_group",
   "old_parent",
@@ -77,11 +78,17 @@
    "fieldname": "custom_url",
    "fieldtype": "Data",
    "label": "Custom URL"
+  },
+  {
+   "default": "0",
+   "fieldname": "redirect_to_external_website",
+   "fieldtype": "Check",
+   "label": "Redirect To External Website"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-19 18:08:35.347163",
+ "modified": "2023-10-30 13:06:19.638282",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Category",

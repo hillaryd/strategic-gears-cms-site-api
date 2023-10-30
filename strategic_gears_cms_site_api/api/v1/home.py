@@ -16,3 +16,18 @@ def get_introduction(kwargs):
     except Exception as e:
         frappe.logger("Introduction").exception(e)
         return error_response(e)
+
+
+@frappe.whitelist(allow_guest=True)
+def get_home_banner(kwargs):
+    try:
+        home_banner = frappe.get_list("Banner", filters={"name": "HOME"}, fields=['name', 'slug', 'banner_text_image',
+                                                                                   'banner_background_image', 'description'])
+        if home_banner:
+            return success_response(data=home_banner[0])
+        else:
+            return success_response(data={})
+
+    except Exception as e:
+        frappe.logger("Introduction").exception(e)
+        return error_response(e)

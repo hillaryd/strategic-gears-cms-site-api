@@ -11,9 +11,7 @@ def get_about_strategic_gears(kwargs):
                                     fields=['banner_name','banner_text_image','banner_background_image']
                                     )
         data['banner_data'] = banner_data
-        print( banner_data)
-        
-
+    
         data['overview_data'] = {'overview_heading': doc.overview_heading,
                                'overview_description': doc.overview_description
                                }
@@ -72,17 +70,18 @@ def get_about_strategic_gears(kwargs):
         data['articles_data'] = []
         
         for article_name in doc.articles:
-            article = frappe.db.get_list('Articles',
+            articles = frappe.db.get_list('Articles',
                                     filters={'name': article_name.article},
-                                    fields=['image','article_name','date']
+                                    fields=['image','article_name','date','article_url']
                                     )
-            article_data = {
-                'article_image': article[0]['image'],
-                'article_name': article[0]['article_name'],
-                'article_date': article[0]['date'],
-                'article_url' : article[0]['article_url']
-            }
-            data['articles_data'].append(article_data)
+            for article in articles:
+                article_data = {
+                    'article_image': article['image'],
+                    'article_name': article['article_name'],
+                    'article_date': article['date'],
+                    'article_url' : article['article_url']
+                }
+                data['articles_data'].append(article_data)
 
 
         return success_response(data=data) 

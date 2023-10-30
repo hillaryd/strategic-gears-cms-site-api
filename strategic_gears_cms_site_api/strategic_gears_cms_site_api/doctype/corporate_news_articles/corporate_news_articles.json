@@ -9,9 +9,11 @@
  "engine": "InnoDB",
  "field_order": [
   "banner",
+  "slug",
   "article_heading",
   "article_description",
   "article_image",
+  "column_break_tpqp2",
   "section_1_heading",
   "section_1_image",
   "section_1_description",
@@ -97,11 +99,20 @@
    "fieldtype": "Link",
    "label": "Banner",
    "options": "Banner"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "label": "slug"
+  },
+  {
+   "fieldname": "column_break_tpqp2",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-26 10:05:59.951795",
+ "modified": "2023-10-30 11:36:43.737920",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Corporate News Articles",

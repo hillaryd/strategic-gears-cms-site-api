@@ -12,6 +12,7 @@
   "banner",
   "heading",
   "description",
+  "slug",
   "image",
   "attach_report",
   "other_publications_for_reports"
@@ -51,11 +52,16 @@
    "fieldtype": "Link",
    "label": "Banner",
    "options": "Banner"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "label": "slug"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-20 16:27:00.548559",
+ "modified": "2023-10-30 11:15:47.737761",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Reports Master",

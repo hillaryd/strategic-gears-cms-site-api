@@ -6,7 +6,7 @@ from strategic_gears_cms_site_api.utils import success_response, error_response
 @frappe.whitelist(allow_guest=True)
 def get_navbar_data(kwargs):
     try:
-        parent_categories = frappe.get_all("Category", filters={"is_group": 1}, fields=["category_name", "label", "custom_url", "sequence", "slug"],order_by = "sequence")
+        parent_categories = frappe.get_all("Category", filters={"is_group": 1}, fields=["category_name", "label", "custom_url", "sequence", "slug",'redirect_to_external_website'],order_by = "sequence")
 
         navbar_data = []
 
@@ -15,7 +15,7 @@ def get_navbar_data(kwargs):
             navbar_item = {
                 "name": category.category_name,
                 "label": category.label,
-                "url": prepare_url(category.slug, parent),
+                "url": prepare_url(category.slug, parent,category.redirect_to_external_website,category.custom_url),
                 "seq": category.sequence,
                 "slug": category.slug,
                 "values": []
@@ -28,7 +28,7 @@ def get_navbar_data(kwargs):
                 child_navbar_item = {
                     "name": child_category.category_name,
                     "label": child_category.label,
-                    "url": prepare_url(child_category.slug,category.slug,),
+                    "url": prepare_url(child_category.slug,category.slug,None,None),
                     "seq": child_category.sequence,
                     "slug": child_category.slug,
                     "values": []
@@ -44,8 +44,10 @@ def get_navbar_data(kwargs):
 
 
 
-def prepare_url(prefix, parent=None):
+def prepare_url(prefix, parent=None,redirect_to_external_website=None,custom_url=None):
     if parent:
         return f"/{parent}/{prefix}"
+    elif redirect_to_external_website and custom_url:
+        return custom_url
     else:
         return f"/{prefix}"
