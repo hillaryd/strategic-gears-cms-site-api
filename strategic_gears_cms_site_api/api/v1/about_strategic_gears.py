@@ -10,7 +10,8 @@ def get_about_strategic_gears(kwargs):
                                     filters={'name': doc.banner},
                                     fields=['banner_name','banner_text_image','banner_background_image']
                                     )
-        data['banner_data'] = banner_data[0]
+        data['banner_data'] = banner_data
+        print( banner_data)
         
 
         data['overview_data'] = {'overview_heading': doc.overview_heading,
@@ -78,7 +79,8 @@ def get_about_strategic_gears(kwargs):
             article_data = {
                 'article_image': article[0]['image'],
                 'article_name': article[0]['article_name'],
-                'article_date': article[0]['date']
+                'article_date': article[0]['date'],
+                'article_url' : article[0]['article_url']
             }
             data['articles_data'].append(article_data)
 
