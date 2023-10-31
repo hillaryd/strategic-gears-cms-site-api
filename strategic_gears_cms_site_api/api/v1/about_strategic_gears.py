@@ -10,7 +10,7 @@ def get_about_strategic_gears(kwargs):
                                     filters={'name': doc.banner},
                                     fields=['banner_name','banner_text_image','banner_background_image']
                                     )
-        data['banner_data'] = banner_data
+        data['banner_data'] = banner_data[0]
     
         data['overview_data'] = {'overview_heading': doc.overview_heading,
                                'overview_description': doc.overview_description
@@ -36,11 +36,18 @@ def get_about_strategic_gears(kwargs):
                                     filters={'parent': item.services_list},
                                     fields=['service_detail'],
                                     )
+            service_master = frappe.get_list('Services Master',
+                                    filters={'name': item.services_list},
+                                    fields=['slug'],
+                                    )
+            for service in service_master:
+                slug = service.slug
             service_values = []
             for service_value in service_data:
                 service_values.append(service_value['service_detail'])
             service = {
                 'service_heading': item.services_list,
+                'slug':slug,
                 'service_values': service_values
             }
             data['services_data']['services_list'].append(service)

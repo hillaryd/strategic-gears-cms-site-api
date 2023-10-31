@@ -18,7 +18,7 @@ def get_pod(kwargs):
         }
     
         data["resource_data"] = {  
-            "resource_heading": doc.partners_section_heading,
+            "resource_heading": doc.resource_management_section_heading,
             "resource_description": doc.resource_management_section_description
         }
 
