@@ -1,11 +1,12 @@
 import frappe
-from strategic_gears_cms_site_api.utils import success_response, error_response
+from strategic_gears_cms_site_api.utils import success_response, error_response,translate_keys
 
 @frappe.whitelist(allow_guest=True)
 def get_corporate_news_data(kwargs):
     try:
+        user_language = kwargs.get('language')
         corporate_news = frappe.get_all("Banner", filters={"banner_name": "CORPORATE NEWS"}, fields=["banner_name", "banner_text_image"])
-        corporate_news_articles = frappe.get_all("Corporate News Articles", fields=["article_heading", "article_image", "article_description","slug"])
+        corporate_news_articles = frappe.get_all("Corporate News Articles", fields=["article_heading","show_data_on_website","article_image", "article_description","slug"])
 
         data_req = {
             "banner_data": {
@@ -25,9 +26,10 @@ def get_corporate_news_data(kwargs):
                 "slug": article["slug"],
                 "article_image": article["article_image"],  
                 "description": article["article_description"],
+                "show_data_on_website":article["show_data_on_website"]
             })
-
-        return success_response(data=data_req)
+        translated_data = translate_keys(data_req, user_language)
+        return success_response(data=translated_data)
     except Exception as e:
         frappe.logger("Corporate News").exception(e)
         return error_response(e)
@@ -35,6 +37,7 @@ def get_corporate_news_data(kwargs):
 @frappe.whitelist(allow_guest=True)
 def get_corporate_news_article_details(kwargs):
     try:
+        user_language = kwargs.get('language')
         corporate_news_article = kwargs.get("article")
         articles = frappe.get_list("Corporate News Articles", filters={"slug":corporate_news_article},
                 fields= ['name','banner','article_heading','article_description','article_image',
@@ -67,7 +70,8 @@ def get_corporate_news_article_details(kwargs):
                     "section_3_description": article.section_3_description,  
                 }
             }
-            return success_response(data=data_req)
+            translated_data = translate_keys(data_req, user_language)
+            return success_response(data=translated_data)
     except Exception as e:
         frappe.logger("Corporate News").exception(e)
         return error_response(e)

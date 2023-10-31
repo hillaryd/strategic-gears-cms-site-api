@@ -1,11 +1,12 @@
 import frappe
 from frappe.utils.password import check_password
-from strategic_gears_cms_site_api.utils import success_response, error_response
+from strategic_gears_cms_site_api.utils import success_response, error_response,translate_keys
 
 
 @frappe.whitelist(allow_guest=True)
 def get_navbar_data(kwargs):
     try:
+        user_language = kwargs.get('language')
         parent_categories = frappe.get_all("Category", filters={"is_group": 1}, fields=["category_name", "label", "custom_url", "sequence", "slug",'redirect_to_external_website'],order_by = "sequence")
 
         navbar_data = []
@@ -36,8 +37,8 @@ def get_navbar_data(kwargs):
                 navbar_item['values'].append(child_navbar_item)
 
             navbar_data.append(navbar_item)
-
-        return success_response(data=navbar_data)
+        translated_data = translate_keys(navbar_data, user_language)
+        return success_response(data=translated_data)
     except Exception as e:
         frappe.logger("Navbar").exception(e)
         return error_response(e)

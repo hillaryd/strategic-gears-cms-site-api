@@ -1,10 +1,11 @@
 import frappe
-from strategic_gears_cms_site_api.utils import success_response, error_response
+from strategic_gears_cms_site_api.utils import success_response, error_response,translate_keys
 
 @frappe.whitelist(allow_guest=True)
 def get_about_strategic_gears(kwargs):
     try:
         data = {}
+        user_language = kwargs.get('language')
         doc = frappe.get_doc('About Strategic Gears')
         banner_data = frappe.db.get_list('Banner',
                                     filters={'name': doc.banner},
@@ -81,17 +82,21 @@ def get_about_strategic_gears(kwargs):
                                     filters={'name': article_name.article},
                                     fields=['image','article_name','date','article_url']
                                     )
+            
             for article in articles:
+                article_date = article['date'].strftime('%d-%m-%y')
                 article_data = {
                     'article_image': article['image'],
                     'article_name': article['article_name'],
-                    'article_date': article['date'],
+                    'article_date': article_date,
                     'article_url' : article['article_url']
                 }
                 data['articles_data'].append(article_data)
 
 
-        return success_response(data=data) 
+        translated_data = translate_keys(data, user_language)
+        
+        return success_response(data=translated_data) 
     except Exception as e:
         frappe.logger("Token").exception(e)
         return error_response(e)

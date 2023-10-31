@@ -1,9 +1,10 @@
 import frappe
-from strategic_gears_cms_site_api.utils import success_response, error_response
+from strategic_gears_cms_site_api.utils import success_response, error_response,translate_keys
 
 @frappe.whitelist(allow_guest=True)
 def get_service_list(kwargs):
     try:
+        user_language = kwargs.get('language')
         services = frappe.get_list("Services Master",pluck="name",order_by = 'sequence')
         banner=[]
         data = []
@@ -24,7 +25,8 @@ def get_service_list(kwargs):
             details = {"name":banner_data["banner_name"],"banner_image":banner_data["banner_background_image"],"slug":desc["slug"],"services_list":service_detail}
            
             data.append(details)
-        return success_response(data)
+        translated_data = translate_keys(data, user_language)    
+        return success_response(translated_data)
     except Exception as e:
         frappe.logger("Service_Details").exception(e)
         return error_response(e)
@@ -32,6 +34,7 @@ def get_service_list(kwargs):
 @frappe.whitelist(allow_guest=True)
 def get_service_details(kwargs):
     try:
+        user_language = kwargs.get('language')
         # Check if the 'name' parameter is provided in kwargs
         if 'name' not in kwargs:
             return error_response("Name parameter is missing")
@@ -56,7 +59,8 @@ def get_service_details(kwargs):
             service_detail.extend(get_service_details)  # Use extend instead of append
           
         details = {"banner_data": banner_data, "description": desc, "services_list": service_detail}
-        return success_response(details)
+        translated_data = translate_keys(details, user_language)
+        return success_response(translated_data)
     except Exception as e:
         frappe.logger("Specific_Service_Details").exception(e)
         return error_response(e)

@@ -1,10 +1,10 @@
 import frappe
-from strategic_gears_cms_site_api.utils import success_response, error_response
+from strategic_gears_cms_site_api.utils import success_response, error_response,translate_keys
 
 @frappe.whitelist(allow_guest=True)
 def get_team_member(kwargs):
     try:
-
+        user_language = kwargs.get('language')
         banner = frappe.get_all("Banner", filters= {"banner_name": "OUR TEAM"}, fields=["banner_name","banner_text_image","banner_background_image"])
         banner_data = banner[0]
 
@@ -34,7 +34,8 @@ def get_team_member(kwargs):
             team_member.append(team_member_dict)
 
         data = {"banner_data":banner_data, "team_members_data":team_member}
-        return success_response(data=data)
+        translated_data = translate_keys(data, user_language)
+        return success_response(data=translated_data)
     except Exception as e:
         frappe.logger("Team").exception(e)
         return error_response(e)

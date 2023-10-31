@@ -1,9 +1,10 @@
 import frappe
-from strategic_gears_cms_site_api.utils import success_response, error_response
+from strategic_gears_cms_site_api.utils import success_response, error_response,translate_keys
 
 @frappe.whitelist(allow_guest=True)
 def get_pod(kwargs):
     try:
+        user_language = kwargs.get('language')
         data={}
         doc=frappe.get_doc("Points of Difference")
         banner_list=frappe.db.get_list("Banner",filters={"name":doc.banner},fields=["banner_name","banner_text_image","banner_background_image"]) 
@@ -33,10 +34,10 @@ def get_pod(kwargs):
         data["framework_data"]= {
             "framework_heading": doc.frameworks_heading,
             "framework_description": doc.frameworks_description,
-  }
+            }
 
-
-        return success_response(data=data)
+        translated_data = translate_keys(data, user_language)
+        return success_response(data=translated_data)
     
     except Exception as e:
         frappe.logger("Token").exception(e)

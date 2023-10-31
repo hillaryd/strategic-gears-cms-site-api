@@ -1,9 +1,10 @@
 import frappe
-from strategic_gears_cms_site_api.utils import success_response, error_response
+from strategic_gears_cms_site_api.utils import success_response, error_response,translate_keys
 
 @frappe.whitelist(allow_guest=True)
 def get_report_list(kwargs):
     try:
+        user_language = kwargs.get('language')
         reports = frappe.get_all("Reports Master", fields=["name", "banner", "heading", "image","slug"])
         data_req = {
             "banner_data": {
@@ -24,8 +25,8 @@ def get_report_list(kwargs):
                 "slug":report.slug
             }
             data_req["reports_list"].append(report_info)
-
-        return success_response(data=data_req)
+        translated_data = translate_keys(data_req, user_language)
+        return success_response(data=translated_data)
     except Exception as e:
         frappe.logger("Report_list").exception(e)
         return error_response(e)
@@ -33,6 +34,7 @@ def get_report_list(kwargs):
 @frappe.whitelist(allow_guest=True)
 def report_details(kwargs):
     try:
+        user_language = kwargs.get('language')
         report_name = kwargs.get("name")
         reports = frappe.get_list("Reports Master", filters = {"slug":report_name},fields=['name','heading','description','attach_report','image'])
         for report in reports:
@@ -57,8 +59,8 @@ def report_details(kwargs):
                     "report_image": other_report_doc.image,
                     "slug":other_report_doc.slug
                 })
-
-        return success_response(data=report_detail)
+        translated_data = translate_keys(report_detail, user_language)
+        return success_response(data=translated_data)
     except Exception as e:
         frappe.logger("Report_list").exception(e)
         return error_response(e)
