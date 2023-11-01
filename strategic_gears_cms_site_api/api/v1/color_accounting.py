@@ -37,7 +37,7 @@ def get_color_accounting(kwargs):
             "learning_outcome_heading": learning_outcome_heading,
             "learning_outcome_subheading": learning_outcome_subheading,
             "learning_outcome_list": learning_outcome_list,
-            "learning_outcome_image:": learning_outcome_image
+            "learning_outcome_image": learning_outcome_image
             }
         translated_data = translate_keys(data, user_language)
         return success_response(data=translated_data)
