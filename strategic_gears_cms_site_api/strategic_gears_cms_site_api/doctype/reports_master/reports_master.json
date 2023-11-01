@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:heading",
+ "creation": "2023-10-16 10:29:39.530714",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "banner",
+  "heading",
+  "description",
+  "slug",
+  "image",
+  "attach_report",
+  "other_publications_for_reports"
+ ],
+ "fields": [
+  {
+   "fieldname": "banner",
+   "fieldtype": "Link",
+   "label": "Banner",
+   "options": "Banner"
+  },
+  {
+   "fieldname": "heading",
+   "fieldtype": "Data",
+   "label": "Heading",
+   "translatable": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description",
+   "translatable": 1
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "label": "slug"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "attach_report",
+   "fieldtype": "Attach",
+   "label": "Attach Report"
+  },
+  {
+   "fieldname": "other_publications_for_reports",
+   "fieldtype": "Table",
+   "label": "Other Publications For Reports",
+   "options": "Other Publications For Reports"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-01 08:09:36.505662",
+ "modified_by": "Administrator",
+ "module": "strategic-gears-cms-site-api",
+ "name": "Reports Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-18 13:58:12.741355",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "banner",
+  "overview_heading",
+  "overview_description",
+  "organizational_purpose_and_values",
+  "services_heading",
+  "services_sub_heading",
+  "services_list",
+  "why_choose_us_heading",
+  "why_choose_us_sub_heading",
+  "reasons_to_choose_us",
+  "achievement_images",
+  "articles"
+ ],
+ "fields": [
+  {
+   "fieldname": "banner",
+   "fieldtype": "Link",
+   "label": "Banner ",
+   "options": "Banner"
+  },
+  {
+   "fieldname": "overview_heading",
+   "fieldtype": "Data",
+   "label": "Overview Heading ",
+   "translatable": 1
+  },
+  {
+   "fieldname": "overview_description",
+   "fieldtype": "Text",
+   "label": "Overview Description",
+   "translatable": 1
+  },
+  {
+   "fieldname": "organizational_purpose_and_values",
+   "fieldtype": "Table",
+   "label": "Organizational Purpose and Values",
+   "options": "Organizational Purpose and Values"
+  },
+  {
+   "fieldname": "services_heading",
+   "fieldtype": "Data",
+   "label": "Services Heading",
+   "translatable": 1
+  },
+  {
+   "fieldname": "services_sub_heading",
+   "fieldtype": "Text",
+   "label": "Services Description",
+   "translatable": 1
+  },
+  {
+   "fieldname": "services_list",
+   "fieldtype": "Table",
+   "label": "Services List",
+   "options": "Services List for About Page"
+  },
+  {
+   "fieldname": "why_choose_us_heading",
+   "fieldtype": "Data",
+   "label": "Why Choose Us Heading",
+   "translatable": 1
+  },
+  {
+   "fieldname": "why_choose_us_sub_heading",
+   "fieldtype": "Data",
+   "label": "Why Choose Us Sub Heading",
+   "translatable": 1
+  },
+  {
+   "fieldname": "reasons_to_choose_us",
+   "fieldtype": "Table",
+   "label": "Reasons To Choose Us",
+   "options": "Reasons To Choose Us"
+  },
+  {
+   "fieldname": "achievement_images",
+   "fieldtype": "Table",
+   "label": "Achievement Images",
+   "options": "Achievement Details"
+  },
+  {
+   "fieldname": "articles",
+   "fieldtype": "Table",
+   "label": "Articles",
+   "options": "Article Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-11-01 07:45:30.112231",
+ "modified_by": "Administrator",
+ "module": "strategic-gears-cms-site-api",
+ "name": "About Strategic Gears",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

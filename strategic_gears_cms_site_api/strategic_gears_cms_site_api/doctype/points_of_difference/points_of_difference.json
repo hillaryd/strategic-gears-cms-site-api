@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-13 17:59:48.650594",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "banner",
+  "partners_section_heading",
+  "partners_section_subheading",
+  "partners_section_image",
+  "resource_management_section_heading",
+  "resource_management_section_description",
+  "understanding_bussiness_section_heading",
+  "understanding_bussiness_section_description",
+  "understanding_bussiness_section",
+  "frameworks_heading",
+  "frameworks_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "banner",
+   "fieldtype": "Link",
+   "label": "Banner ",
+   "options": "Banner"
+  },
+  {
+   "fieldname": "partners_section_heading",
+   "fieldtype": "Data",
+   "label": "Partners Section Heading",
+   "translatable": 1
+  },
+  {
+   "fieldname": "partners_section_subheading",
+   "fieldtype": "Text",
+   "label": "Partners Section Subheading",
+   "translatable": 1
+  },
+  {
+   "fieldname": "partners_section_image",
+   "fieldtype": "Table",
+   "label": "Partners Section Image",
+   "options": "Partners Section Image"
+  },
+  {
+   "fieldname": "resource_management_section_heading",
+   "fieldtype": "Data",
+   "label": "Resource Management Section Heading",
+   "translatable": 1
+  },
+  {
+   "fieldname": "resource_management_section_description",
+   "fieldtype": "Text",
+   "label": "Resource Management Section Description",
+   "translatable": 1
+  },
+  {
+   "fieldname": "understanding_bussiness_section_heading",
+   "fieldtype": "Data",
+   "label": "Understanding Bussiness Section Heading",
+   "translatable": 1
+  },
+  {
+   "fieldname": "understanding_bussiness_section_description",
+   "fieldtype": "Text",
+   "label": "Understanding Bussiness Section Description ",
+   "translatable": 1
+  },
+  {
+   "fieldname": "understanding_bussiness_section",
+   "fieldtype": "Table",
+   "label": "Bussinesses",
+   "options": "Understanding Bussiness Section"
+  },
+  {
+   "fieldname": "frameworks_heading",
+   "fieldtype": "Data",
+   "label": "Frameworks Heading",
+   "translatable": 1
+  },
+  {
+   "fieldname": "frameworks_description",
+   "fieldtype": "Text",
+   "label": "Frameworks Description",
+   "translatable": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-11-01 08:07:12.058868",
+ "modified_by": "Administrator",
+ "module": "strategic-gears-cms-site-api",
+ "name": "Points of Difference",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
