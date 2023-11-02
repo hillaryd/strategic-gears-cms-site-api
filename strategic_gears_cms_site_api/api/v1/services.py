@@ -56,7 +56,9 @@ def get_service_details(kwargs):
         for service_details in service_details_list:
             get_service_details = frappe.get_all("Service Details Master", filters={"name": service_details}, fields=["heading", "description"])
         
-            service_detail.extend(get_service_details)  # Use extend instead of append
+            # Check if 'description' is not null or not set
+            if get_service_details[0].get("description"):
+                service_detail.extend(get_service_details)  # Use extend instead of append
           
         details = {"banner_data": banner_data, "description": desc, "services_list": service_detail}
         translated_data = translate_keys(details, user_language)
