@@ -78,7 +78,6 @@ def get_count(doctype, **args):
         return error_response(str(e))
     
 
-
 def get_translation(key, language):
     translation = frappe.get_all("Translation", filters={"source_text": key, "language": language}, fields=["translated_text"])
     return translation[0]["translated_text"] if translation else key
@@ -94,3 +93,5 @@ def translate_keys(data, user_language):
         return [translate_keys(item, user_language) for item in data]
     else:
         return get_translation(data, user_language)
+
+

@@ -10,6 +10,7 @@
  "engine": "InnoDB",
  "field_order": [
   "banner",
+  "label",
   "heading",
   "description",
   "slug",
@@ -57,11 +58,17 @@
    "fieldname": "slug",
    "fieldtype": "Data",
    "label": "slug"
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "translatable": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 11:15:47.737761",
+ "modified": "2023-11-03 14:44:55.817170",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Reports Master",

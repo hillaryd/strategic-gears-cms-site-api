@@ -5,7 +5,7 @@ from strategic_gears_cms_site_api.utils import success_response, error_response,
 def get_report_list(kwargs):
     try:
         user_language = kwargs.get('language')
-        reports = frappe.get_all("Reports Master", fields=["name", "banner", "heading", "image","slug"])
+        reports = frappe.get_all("Reports Master", fields=["label","name", "banner", "heading", "image","slug"])
         data_req = {
             "banner_data": {
                 "banner_name": "",
@@ -15,12 +15,13 @@ def get_report_list(kwargs):
 
         banner_field = frappe.get_doc("Banner", reports[0].banner)
         data_req["banner_data"]["banner_name"] = banner_field.banner_name
-        data_req["banner_data"]["banner_text_image"] = banner_field.banner_text_image
+        data_req["banner_data"]["banner_text"] = banner_field.banner_text
         data_req["banner_data"]["banner_background_image"] = banner_field.banner_background_image
 
         for report in reports:
             report_info = {
                 "report_name": report.heading,
+                "label":report.label,
                 "report_image": report.image,
                 "slug":report.slug
             }
@@ -36,13 +37,14 @@ def report_details(kwargs):
     try:
         user_language = kwargs.get('language')
         report_name = kwargs.get("name")
-        reports = frappe.get_list("Reports Master", filters = {"slug":report_name},fields=['name','heading','description','attach_report','image'])
+        reports = frappe.get_list("Reports Master", filters = {"slug":report_name},fields=['label','name','heading','description','attach_report','image'])
         for report in reports:
             if not report:
                 return {"error": "Report not found"}
 
             report_detail = {
                 "report_name": report.heading,
+                "label":report.label,
                 "report_image": report.image,
                 "report_description": report.description,
                 "report_file": report.attach_report,
@@ -56,6 +58,7 @@ def report_details(kwargs):
             if other_report_doc:
                 report_detail["other_reports"].append({
                     "report_name": other_report_doc.heading,
+                    "label":other_report_doc.label,
                     "report_image": other_report_doc.image,
                     "slug":other_report_doc.slug
                 })

@@ -70,12 +70,13 @@
   {
    "fieldname": "banner_text",
    "fieldtype": "Data",
-   "label": "Banner Text"
+   "label": "Banner Text",
+   "translatable": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-03 13:29:13.987938",
+ "modified": "2023-11-03 14:03:59.303916",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Banner",

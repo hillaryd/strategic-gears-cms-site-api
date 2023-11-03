@@ -93,9 +93,8 @@ def get_about_strategic_gears(kwargs):
                 }
                 data['articles_data'].append(article_data)
 
-
         translated_data = translate_keys(data, user_language)
-        
+
         return success_response(data=translated_data) 
     except Exception as e:
         frappe.logger("Token").exception(e)
