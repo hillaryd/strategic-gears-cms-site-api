@@ -10,6 +10,7 @@
  "engine": "InnoDB",
  "field_order": [
   "heading",
+  "label",
   "description"
  ],
  "fields": [
@@ -25,11 +26,17 @@
    "fieldtype": "Text",
    "label": "Description",
    "translatable": 1
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "translatable": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-01 07:55:21.635270",
+ "modified": "2023-11-03 13:35:10.582225",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Service Details Master",

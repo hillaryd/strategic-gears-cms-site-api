@@ -17,7 +17,7 @@ def get_service_list(kwargs):
             service_details_list = frappe.get_all("Service Details",filters={"parent":service},pluck="service_detail",order_by = 'sequence')
             service_detail = []
             for service_details in service_details_list:
-                get_service_details = frappe.get_all("Service Details Master",filters={"name":service_details},fields=["heading","description"])
+                get_service_details = frappe.get_all("Service Details Master",filters={"name":service_details},fields=["heading","description","label"])
                 service_detail.extend(get_service_details)
             service_desc = frappe.get_list("Services Master",filters={"name":service},fields=["description","slug"],order_by = 'sequence')
             for service in service_desc:
@@ -42,7 +42,7 @@ def get_service_details(kwargs):
         service_name = kwargs.get('name')
 
         # Retrieve specific service details
-        banner = frappe.get_list("Banner", filters={"slug": service_name}, fields=["banner_name", "banner_text_image","banner_background_image"])
+        banner = frappe.get_list("Banner", filters={"slug": service_name}, fields=["banner_name", "banner_text","banner_background_image"])
         banner_data = banner[0] if banner else {}
 
         service_desc = frappe.get_list("Services Master", filters={"slug": service_name}, fields=['description','name'],order_by = 'sequence')
@@ -54,9 +54,11 @@ def get_service_details(kwargs):
         service_detail = []
 
         for service_details in service_details_list:
-            get_service_details = frappe.get_all("Service Details Master", filters={"name": service_details}, fields=["heading", "description"])
+            get_service_details = frappe.get_all("Service Details Master", filters={"name": service_details}, fields=["heading", "description","label"])
         
-            service_detail.extend(get_service_details)  # Use extend instead of append
+            # Check if 'description' is not null or not set
+            if get_service_details[0].get("description"):
+                service_detail.extend(get_service_details)  # Use extend instead of append
           
         details = {"banner_data": banner_data, "description": desc, "services_list": service_detail}
         translated_data = translate_keys(details, user_language)

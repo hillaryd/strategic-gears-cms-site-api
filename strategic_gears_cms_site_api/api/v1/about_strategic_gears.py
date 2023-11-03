@@ -9,7 +9,7 @@ def get_about_strategic_gears(kwargs):
         doc = frappe.get_doc('About Strategic Gears')
         banner_data = frappe.db.get_list('Banner',
                                     filters={'name': doc.banner},
-                                    fields=['banner_name','banner_text_image','banner_background_image']
+                                    fields=['banner_name','banner_text','banner_background_image']
                                     )
         data['banner_data'] = banner_data[0]
     
@@ -92,11 +92,9 @@ def get_about_strategic_gears(kwargs):
                     'article_url' : article['article_url']
                 }
                 data['articles_data'].append(article_data)
-
-
         translated_data = translate_keys(data, user_language)
-        
-        return success_response(data=translated_data) 
+
+        return success_response(translated_data) 
     except Exception as e:
         frappe.logger("Token").exception(e)
         return error_response(e)

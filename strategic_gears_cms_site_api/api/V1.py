@@ -13,6 +13,8 @@ import strategic_gears_cms_site_api.api.v1.newsletter as newsletter
 import strategic_gears_cms_site_api.api.v1.report as report
 import strategic_gears_cms_site_api.api.v1.corporate_news as corporate_news
 import strategic_gears_cms_site_api.api.v1.home as home
+import strategic_gears_cms_site_api.api.v1.seo as seo
+import strategic_gears_cms_site_api.api.v1.contact as contact
 
 
 class V1():
@@ -30,7 +32,9 @@ class V1():
             'newsletter':['get_newsletter'],
             'report':['get_report_list','report_details'],
             'corporate_news':['get_corporate_news_data','get_corporate_news_article_details'],
-            'home':['get_introduction','get_home_banner']
+            'home':['get_introduction','get_home_banner'],
+            'seo':['get_site_map'],
+            'contact':['create_contact']
         }
 
     def class_map(self, kwargs):

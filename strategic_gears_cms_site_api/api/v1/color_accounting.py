@@ -6,7 +6,7 @@ def get_color_accounting(kwargs):
     try:
         user_language = kwargs.get('language')
         color_accounting = frappe.get_doc("Color Accounting")
-        banner_data = frappe.get_all("Banner",filters={"banner_name":"COLOR ACCOUNTING LEARNING SYSTEM"},fields=["banner_name","banner_background_image","banner_text_image"])
+        banner_data = frappe.get_all("Banner",filters={"banner_name":"COLOR ACCOUNTING LEARNING SYSTEM"},fields=["banner_name","banner_background_image","banner_text"])
         consultancy_heading = color_accounting.management_consultancy_heading
         consultancy_subheading = color_accounting.management_consultancy_subheading
         consultancy_description = color_accounting.management_consultancy_description
@@ -37,7 +37,7 @@ def get_color_accounting(kwargs):
             "learning_outcome_heading": learning_outcome_heading,
             "learning_outcome_subheading": learning_outcome_subheading,
             "learning_outcome_list": learning_outcome_list,
-            "learning_outcome_image:": learning_outcome_image
+            "learning_outcome_image": learning_outcome_image
             }
         translated_data = translate_keys(data, user_language)
         return success_response(data=translated_data)
