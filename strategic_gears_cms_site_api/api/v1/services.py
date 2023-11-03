@@ -17,7 +17,7 @@ def get_service_list(kwargs):
             service_details_list = frappe.get_all("Service Details",filters={"parent":service},pluck="service_detail",order_by = 'sequence')
             service_detail = []
             for service_details in service_details_list:
-                get_service_details = frappe.get_all("Service Details Master",filters={"name":service_details},fields=["heading","description"])
+                get_service_details = frappe.get_all("Service Details Master",filters={"name":service_details},fields=["heading","description","label"])
                 service_detail.extend(get_service_details)
             service_desc = frappe.get_list("Services Master",filters={"name":service},fields=["description","slug"],order_by = 'sequence')
             for service in service_desc:
@@ -54,7 +54,7 @@ def get_service_details(kwargs):
         service_detail = []
 
         for service_details in service_details_list:
-            get_service_details = frappe.get_all("Service Details Master", filters={"name": service_details}, fields=["heading", "description"])
+            get_service_details = frappe.get_all("Service Details Master", filters={"name": service_details}, fields=["heading", "description","label"])
         
             # Check if 'description' is not null or not set
             if get_service_details[0].get("description"):
