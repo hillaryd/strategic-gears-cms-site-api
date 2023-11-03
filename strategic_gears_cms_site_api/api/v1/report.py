@@ -25,7 +25,7 @@ def get_report_list(kwargs):
                 "report_image": report.image,
                 "slug":report.slug
             }
-            data_req["reports_list"].append(report_info)
+            data_req["reports_list"].append(report_info)   
         translated_data = translate_keys(data_req, user_language)
         return success_response(data=translated_data)
     except Exception as e:

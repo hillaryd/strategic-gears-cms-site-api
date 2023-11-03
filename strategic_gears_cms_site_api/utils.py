@@ -83,15 +83,20 @@ def get_translation(key, language):
     return translation[0]["translated_text"] if translation else key
 
 def translate_keys(data, user_language):
+    
     if isinstance(data, dict):
         translated_data = {}
         for key, value in data.items():
+            
             translated_key = get_translation(key, user_language)
+            if value == None:
+                value = ""
+            d = translate_keys(value, user_language)
             translated_data[translated_key] = translate_keys(value, user_language)
         return translated_data
     elif isinstance(data, list):
         return [translate_keys(item, user_language) for item in data]
     else:
-        return get_translation(data, user_language)
+        return get_translation(data, user_language)  
 
 
