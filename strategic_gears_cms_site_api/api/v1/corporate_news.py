@@ -11,14 +11,14 @@ def get_corporate_news_data(kwargs):
         data_req = {
             "banner_data": {
                 "banner_name":"",
-                "banner_txt": "",
+                "banner_text": "",
                 "banner_background_img": "",
             },
             "corporate_articles_list": []
         }
         banner_field = frappe.get_doc("Banner", corporate_news[0].banner_name)
         data_req["banner_data"]["banner_name"] = banner_field.banner_name
-        data_req["banner_data"]["banner_txt"] = banner_field.banner_text
+        data_req["banner_data"]["banner_text"] = banner_field.banner_text
         data_req["banner_data"]["banner_background_img"] = banner_field.banner_background_image
         for article in corporate_news_articles:
             data_req["corporate_articles_list"].append({
