@@ -5,7 +5,7 @@ from strategic_gears_cms_site_api.utils import success_response, error_response,
 def get_report_list(kwargs):
     try:
         user_language = kwargs.get('language')
-        reports = frappe.get_all("Reports Master", fields=["label","name", "banner", "heading", "image","slug"])
+        reports = frappe.get_all("Reports Master", fields=["label","name", "banner", "heading", "image","slug","custom_image_ar","custom_attach_report_ar"])
         data_req = {
             "banner_data": {
                 "banner_name": "",
@@ -17,53 +17,82 @@ def get_report_list(kwargs):
         data_req["banner_data"]["banner_name"] = banner_field.banner_name
         data_req["banner_data"]["banner_text"] = banner_field.banner_text
         data_req["banner_data"]["banner_background_image"] = banner_field.banner_background_image
+        
 
         for report in reports:
-            report_info = {
-                "report_name": report.heading,
-                "label":report.label,
-                "report_image": report.image,
-                "slug":report.slug
-            }
-            data_req["reports_list"].append(report_info)   
+            if user_language == "en":
+                report_info = {
+                    "report_name": report.heading,
+                    "label":report.label,
+                    "report_image": report.image,
+                    "slug":report.slug
+                }
+                data_req["reports_list"].append(report_info) 
+            if user_language == "ar":    
+                report_info = {
+                    "report_name": report.heading,
+                    "label":report.label,
+                    "report_image": report.custom_image_ar,
+                    "slug":report.slug
+                }
+                data_req["reports_list"].append(report_info) 
         translated_data = translate_keys(data_req, user_language)
         return success_response(data=translated_data)
     except Exception as e:
         frappe.logger("Report_list").exception(e)
         return error_response(e)
+    
+
 
 @frappe.whitelist(allow_guest=True)
 def report_details(kwargs):
     try:
         user_language = kwargs.get('language')
         report_name = kwargs.get("name")
-        reports = frappe.get_list("Reports Master", filters = {"slug":report_name},fields=['label','name','heading','description','attach_report','image'])
+        reports = frappe.get_list("Reports Master", filters = {"slug":report_name},fields=['label','name','heading','description','attach_report','image',"custom_image_ar","custom_attach_report_ar"])
         for report in reports:
             if not report:
                 return {"error": "Report not found"}
+            if user_language == 'en':
+                report_detail = {
+                    "report_name": report.heading,
+                    "label":report.label,
+                    "report_image": report.image,
+                    "report_description": report.description,
+                    "report_file": report.attach_report,
+                    "other_reports": []
+                }
+            if user_language == 'ar':
+                report_detail = {
+                    "report_name": report.heading,
+                    "label":report.label,
+                    "report_image": report.custom_image_ar,
+                    "report_description": report.description,
+                    "report_file": report.custom_attach_report_ar,
+                    "other_reports": []
+                } 
 
-            report_detail = {
-                "report_name": report.heading,
-                "label":report.label,
-                "report_image": report.image,
-                "report_description": report.description,
-                "report_file": report.attach_report,
-                "other_reports": []
-            }
+            other_reports = frappe.get_all("Other Publications For Reports", filters={"parent": report.name}, fields=["other_publications"])
 
-        other_reports = frappe.get_all("Other Publications For Reports", filters={"parent": report.name}, fields=["other_publications"])
-
-        for other_report in other_reports:
-            other_report_doc = frappe.get_doc("Reports Master", other_report.other_publications)
-            if other_report_doc:
-                report_detail["other_reports"].append({
-                    "report_name": other_report_doc.heading,
-                    "label":other_report_doc.label,
-                    "report_image": other_report_doc.image,
-                    "slug":other_report_doc.slug
-                })
-        translated_data = translate_keys(report_detail, user_language)
-        return success_response(data=translated_data)
+            for other_report in other_reports:
+                other_report_doc = frappe.get_doc("Reports Master", other_report.other_publications)
+                if other_report_doc:
+                    if user_language == 'en':
+                        report_detail["other_reports"].append({
+                            "report_name": other_report_doc.heading,
+                            "label":other_report_doc.label,
+                            "report_image": other_report_doc.image,
+                            "slug":other_report_doc.slug
+                        })
+                    if user_language == 'ar':
+                        report_detail["other_reports"].append({
+                            "report_name": other_report_doc.heading,
+                            "label":other_report_doc.label,
+                            "report_image": other_report_doc.custom_image_ar,
+                            "slug":other_report_doc.slug
+                        })  
+            translated_data = translate_keys(report_detail, user_language)
+            return success_response(data=translated_data)
     except Exception as e:
         frappe.logger("Report_list").exception(e)
         return error_response(e)
