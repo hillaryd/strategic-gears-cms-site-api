@@ -9,7 +9,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "speciality_name"
+  "speciality_name",
+  "label"
  ],
  "fields": [
   {
@@ -18,11 +19,17 @@
    "label": "Speciality Name",
    "translatable": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "translatable": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-18 13:49:07.892416",
+ "modified": "2023-11-03 13:34:54.563528",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Speciality Master",

@@ -5,20 +5,20 @@ from strategic_gears_cms_site_api.utils import success_response, error_response,
 def get_corporate_news_data(kwargs):
     try:
         user_language = kwargs.get('language')
-        corporate_news = frappe.get_all("Banner", filters={"banner_name": "CORPORATE NEWS"}, fields=["banner_name", "banner_text_image"])
+        corporate_news = frappe.get_all("Banner", filters={"banner_name": "CORPORATE NEWS"}, fields=["banner_name", "banner_text"])
         corporate_news_articles = frappe.get_all("Corporate News Articles", fields=["article_heading","show_data_on_website","article_image", "article_description","slug"])
 
         data_req = {
             "banner_data": {
                 "banner_name":"",
-                "banner_txt_image": "",
+                "banner_txt": "",
                 "banner_background_img": "",
             },
             "corporate_articles_list": []
         }
         banner_field = frappe.get_doc("Banner", corporate_news[0].banner_name)
         data_req["banner_data"]["banner_name"] = banner_field.banner_name
-        data_req["banner_data"]["banner_txt_image"] = banner_field.banner_text_image
+        data_req["banner_data"]["banner_txt"] = banner_field.banner_text
         data_req["banner_data"]["banner_background_img"] = banner_field.banner_background_image
         for article in corporate_news_articles:
             data_req["corporate_articles_list"].append({
@@ -49,7 +49,7 @@ def get_corporate_news_article_details(kwargs):
                 banner_field = frappe.get_doc("Banner", article.banner)
                 banner_data = {
                     "banner_name":banner_field.banner_name,
-                    "banner_text_img": banner_field.banner_text_image,
+                    "banner_text": banner_field.banner_text,
                     "banner_background_img": banner_field.banner_background_image,
                 }
             

@@ -1,5 +1,5 @@
 import frappe
-from sme_sg.utils import success_response, error_response
+from strategic_gears_cms_site_api.utils import success_response, error_response
 import json
 
 def create_contact(kwargs):
