@@ -6,7 +6,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "team_member_name"
+  "team_member_name",
+  "show_on_website"
  ],
  "fields": [
   {
@@ -14,12 +15,18 @@
    "fieldtype": "Link",
    "label": "Team Member Name",
    "options": "Team Member"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_on_website",
+   "fieldtype": "Check",
+   "label": "Show on Website"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-16 13:08:44.796857",
+ "modified": "2023-11-06 08:32:19.476289",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Team Details",

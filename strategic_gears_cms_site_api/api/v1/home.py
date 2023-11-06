@@ -23,7 +23,7 @@ def get_introduction(kwargs):
 def get_home_banner(kwargs):
     try:
         user_language = kwargs.get('language')
-        home_banner = frappe.get_list("Banner", filters={"name": "HOME"}, fields=['name', 'slug', 'banner_text_image',
+        home_banner = frappe.get_list("Banner", filters={"name": "HOME"}, fields=['name', 'slug', 'banner_text',
                                     'banner_background_image', 'description',"banner_height","banner_font_size","banner_alignment"])
         translated_data = translate_keys(home_banner[0], user_language)
         if home_banner:
