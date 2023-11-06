@@ -12,6 +12,10 @@
   "banner",
   "label",
   "heading",
+  "column_break_4png5",
+  "show_on_website",
+  "sequence",
+  "section_break_18pof",
   "description",
   "slug",
   "image",
@@ -75,11 +79,30 @@
    "fieldtype": "Data",
    "label": "Label",
    "translatable": 1
+  },
+  {
+   "fieldname": "column_break_4png5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_on_website",
+   "fieldtype": "Check",
+   "label": "Show on Website"
+  },
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "label": "Sequence"
+  },
+  {
+   "fieldname": "section_break_18pof",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-03 14:44:55.817170",
+ "modified": "2023-11-06 08:50:10.644960",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Reports Master",

@@ -5,7 +5,7 @@ from strategic_gears_cms_site_api.utils import success_response, error_response,
 def get_report_list(kwargs):
     try:
         user_language = kwargs.get('language')
-        reports = frappe.get_all("Reports Master", fields=["label","name", "banner", "heading", "image","slug","custom_image_ar","custom_attach_report_ar"])
+        reports = frappe.get_list("Reports Master", fields=["label","name", "banner", "heading", "image","slug","custom_image_ar","custom_attach_report_ar","show_on_website","sequence"], order_by ="sequence")
         data_req = {
             "banner_data": {},
             "reports_list": []
@@ -25,7 +25,8 @@ def get_report_list(kwargs):
                     "report_name": report.heading,
                     "label":report.label,
                     "report_image": report.image,
-                    "slug":report.slug
+                    "slug":report.slug,
+                    "sequence":report.sequence
                 }
                 data_req["reports_list"].append(report_info) 
             if user_language == "ar":    
@@ -33,7 +34,8 @@ def get_report_list(kwargs):
                     "report_name": report.heading,
                     "label":report.label,
                     "report_image": report.custom_image_ar,
-                    "slug":report.slug
+                    "slug":report.slug,
+                    "sequence":report.sequence
                 }
                 data_req["reports_list"].append(report_info) 
         translated_data = translate_keys(data_req, user_language)
@@ -49,7 +51,7 @@ def report_details(kwargs):
     try:
         user_language = kwargs.get('language')
         report_name = kwargs.get("name")
-        reports = frappe.get_list("Reports Master", filters = {"slug":report_name},fields=['label','name','heading','description','attach_report','image',"custom_image_ar","custom_attach_report_ar"])
+        reports = frappe.get_list("Reports Master", filters = {"slug":report_name},fields=['label','name','heading','description','attach_report','image',"custom_image_ar","custom_attach_report_ar","show_on_website","sequence"])
         for report in reports:
             if not report:
                 return {"error": "Report not found"}
@@ -60,6 +62,7 @@ def report_details(kwargs):
                     "report_image": report.image,
                     "report_description": report.description,
                     "report_file": report.attach_report,
+                    "sequence":report.sequence,
                     "other_reports": []
                 }
             if user_language == 'ar':
@@ -69,6 +72,7 @@ def report_details(kwargs):
                     "report_image": report.custom_image_ar,
                     "report_description": report.description,
                     "report_file": report.custom_attach_report_ar,
+                    "sequence":report.sequence,
                     "other_reports": []
                 } 
 
@@ -82,17 +86,55 @@ def report_details(kwargs):
                             "report_name": other_report_doc.heading,
                             "label":other_report_doc.label,
                             "report_image": other_report_doc.image,
-                            "slug":other_report_doc.slug
+                            "slug":other_report_doc.slug,
+                            "sequence":other_report_doc.sequence
                         })
                     if user_language == 'ar':
                         report_detail["other_reports"].append({
                             "report_name": other_report_doc.heading,
                             "label":other_report_doc.label,
                             "report_image": other_report_doc.custom_image_ar,
-                            "slug":other_report_doc.slug
+                            "slug":other_report_doc.slug,
+                            "sequence":other_report_doc.sequence
                         })  
             translated_data = translate_keys(report_detail, user_language)
             return success_response(data=translated_data)
     except Exception as e:
         frappe.logger("Report_list").exception(e)
+        return error_response(e)
+
+
+@frappe.whitelist(allow_guest=True)
+def home_page_report_list(kwargs):
+    try:
+        user_language = kwargs.get('language')
+        reports = frappe.get_list("Reports Master",filters={"show_on_website":1},fields=["label","name", "banner", "heading", "image","slug","custom_image_ar","custom_attach_report_ar","show_on_website","sequence"],order_by ="sequence")
+        result = {
+            "reports_list": []
+        }
+        for report in reports:
+            if user_language == "en":
+                report_info = {
+                    "report_name": report.heading,
+                    "label":report.label,
+                    "report_image": report.image,
+                    "slug":report.slug,
+                    "show_on_website":report.show_on_website,
+                    "sequence":report.sequence
+                }
+                result["reports_list"].append(report_info) 
+            if user_language == "ar":    
+                report_info = {
+                    "report_name": report.heading,
+                    "label":report.label,
+                    "report_image": report.custom_image_ar,
+                    "slug":report.slug,
+                    "show_on_website":report.show_on_website,
+                    "sequence":report.sequence
+                }
+                result["reports_list"].append(report_info) 
+        translated_data = translate_keys(result, user_language) 
+        return success_response(data=translated_data)
+    except Exception as e:
+        frappe.logger("Report list").exception(e)
         return error_response(e)
