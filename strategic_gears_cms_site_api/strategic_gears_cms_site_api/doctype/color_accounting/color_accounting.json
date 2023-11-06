@@ -15,6 +15,7 @@
   "background_section_subheading",
   "background_section_description",
   "highlited_background_section_description",
+  "finacial_industry_description",
   "industries",
   "industry_images",
   "recognized_universities_description",
@@ -119,12 +120,17 @@
    "fieldtype": "Text",
    "label": "Highlited Background Section Description",
    "translatable": 1
+  },
+  {
+   "fieldname": "finacial_industry_description",
+   "fieldtype": "Text",
+   "label": "Finacial Industry Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-11-06 11:35:39.634446",
+ "modified": "2023-11-06 16:42:16.824908",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Color Accounting",

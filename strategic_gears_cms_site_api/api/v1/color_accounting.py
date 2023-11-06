@@ -22,11 +22,13 @@ def get_color_accounting(kwargs):
         learning_outcome_list = frappe.get_all("Learning Outcome",fields=["learning_outcome"])
         learning_outcome_image = color_accounting.learning_outcome_image
         highlited_background_section_description = color_accounting.highlited_background_section_description
+        finacial_industry_description = color_accounting.finacial_industry_description
         consultancy_data = {"consultancy_heading":consultancy_heading,"consultancy_subheading":consultancy_subheading,"consultancy_description":consultancy_description}
         background_data = {"background_heading": background_heading,
             "background_subheading" : background_subheading,
             "background_description": background_description,
-            "highlited_background_section_description":highlited_background_section_description
+            "highlited_background_section_description":highlited_background_section_description,
+            "finacial_industry_description":finacial_industry_description
             }
 
         data = {
