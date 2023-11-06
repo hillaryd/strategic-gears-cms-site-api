@@ -15,6 +15,7 @@
   "column_break_4png5",
   "show_on_website",
   "sequence",
+  "home_page_sequence",
   "section_break_18pof",
   "description",
   "slug",
@@ -98,11 +99,17 @@
   {
    "fieldname": "section_break_18pof",
    "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "home_page_sequence",
+   "fieldtype": "Int",
+   "label": "Home Page Sequence"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-06 08:50:10.644960",
+ "modified": "2023-11-06 14:22:53.498241",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Reports Master",

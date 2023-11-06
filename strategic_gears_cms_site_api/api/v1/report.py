@@ -108,7 +108,7 @@ def report_details(kwargs):
 def home_page_report_list(kwargs):
     try:
         user_language = kwargs.get('language')
-        reports = frappe.get_list("Reports Master",filters={"show_on_website":1},fields=["label","name", "banner", "heading", "image","slug","custom_image_ar","custom_attach_report_ar","show_on_website","sequence"],order_by ="sequence")
+        reports = frappe.get_list("Reports Master",filters={"show_on_website":1},fields=["label","name", "banner", "heading", "image","slug","custom_image_ar","custom_attach_report_ar","show_on_website","home_page_sequence"],order_by ="home_page_sequence")
         result = {
             "reports_list": []
         }
@@ -120,7 +120,7 @@ def home_page_report_list(kwargs):
                     "report_image": report.image,
                     "slug":report.slug,
                     "show_on_website":report.show_on_website,
-                    "sequence":report.sequence
+                    "home_page_sequence":report.home_page_sequence
                 }
                 result["reports_list"].append(report_info) 
             if user_language == "ar":    
@@ -130,7 +130,7 @@ def home_page_report_list(kwargs):
                     "report_image": report.custom_image_ar,
                     "slug":report.slug,
                     "show_on_website":report.show_on_website,
-                    "sequence":report.sequence
+                    "home_page_sequence":report.home_page_sequence
                 }
                 result["reports_list"].append(report_info) 
         translated_data = translate_keys(result, user_language) 

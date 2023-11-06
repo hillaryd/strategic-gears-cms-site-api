@@ -19,9 +19,10 @@ def get_newsletter(kwargs):
                             }
         
         data["newsletters_list"]=[]
-        for item in doc.newesletter_master_table:
+        newsletter_details = frappe.get_all("Newsletter Details",filters={"parent":doc},fields=['newsletter_master','sequence'],order_by='sequence')
+        for newsletter in newsletter_details:
             service_data = frappe.db.get_list('NewsLetters Master',
-                                    filters={'name': item.newsletter_master},
+                                    filters={'name': newsletter.newsletter_master},
                                     fields=["newsletter_name",'cover_image',"attach"]
                                     )
             newsletter=service_data[0]
