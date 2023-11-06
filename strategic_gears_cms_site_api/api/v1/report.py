@@ -7,9 +7,7 @@ def get_report_list(kwargs):
         user_language = kwargs.get('language')
         reports = frappe.get_all("Reports Master", fields=["label","name", "banner", "heading", "image","slug","custom_image_ar","custom_attach_report_ar"])
         data_req = {
-            "banner_data": {
-                "banner_name": "",
-            },
+            "banner_data": {},
             "reports_list": []
         }
 
@@ -17,7 +15,9 @@ def get_report_list(kwargs):
         data_req["banner_data"]["banner_name"] = banner_field.banner_name
         data_req["banner_data"]["banner_text"] = banner_field.banner_text
         data_req["banner_data"]["banner_background_image"] = banner_field.banner_background_image
-        
+        data_req["banner_data"]["banner_height"] = banner_field.banner_height
+        data_req["banner_data"]["banner_font_size"] = banner_field.banner_font_size
+        data_req["banner_data"]["banner_alignment"] = banner_field.banner_alignment
 
         for report in reports:
             if user_language == "en":

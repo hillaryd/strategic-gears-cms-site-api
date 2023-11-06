@@ -6,7 +6,7 @@ def get_client(kwargs):
     try:
         user_language = kwargs.get('language')
         doc = frappe.get_doc("Client")
-        banner_data_list = frappe.get_all("Banner",filters={"banner_name":"OUR CLIENTS"},fields=["banner_name","banner_text","banner_background_image"])
+        banner_data_list = frappe.get_all("Banner",filters={"banner_name":"OUR CLIENTS"},fields=["banner_name","banner_text","banner_background_image","banner_height","banner_font_size","banner_alignment"])
         banner_data = banner_data_list[0]
         clients = frappe.get_all("Client Details",pluck="client_name") 
         client_data_list = []

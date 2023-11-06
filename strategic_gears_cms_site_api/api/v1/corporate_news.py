@@ -5,21 +5,20 @@ from strategic_gears_cms_site_api.utils import success_response, error_response,
 def get_corporate_news_data(kwargs):
     try:
         user_language = kwargs.get('language')
-        corporate_news = frappe.get_all("Banner", filters={"banner_name": "CORPORATE NEWS"}, fields=["banner_name", "banner_text"])
+        corporate_news = frappe.get_all("Banner", filters={"banner_name": "CORPORATE NEWS"}, fields=["banner_name", "banner_text","banner_height","banner_font_size","banner_alignment"])
         corporate_news_articles = frappe.get_all("Corporate News Articles", fields=["article_heading","show_data_on_website","article_image", "article_description","slug"])
 
         data_req = {
-            "banner_data": {
-                "banner_name":"",
-                "banner_text": "",
-                "banner_background_img": "",
-            },
+            "banner_data": {},
             "corporate_articles_list": []
         }
         banner_field = frappe.get_doc("Banner", corporate_news[0].banner_name)
         data_req["banner_data"]["banner_name"] = banner_field.banner_name
         data_req["banner_data"]["banner_text"] = banner_field.banner_text
         data_req["banner_data"]["banner_background_img"] = banner_field.banner_background_image
+        data_req["banner_data"]["banner_height"] = banner_field.banner_height
+        data_req["banner_data"]["banner_font_size"] = banner_field.banner_font_size
+        data_req["banner_data"]["banner_alignment"] = banner_field.banner_alignment
         for article in corporate_news_articles:
             data_req["corporate_articles_list"].append({
                 "article_name": article["article_heading"],
@@ -51,6 +50,9 @@ def get_corporate_news_article_details(kwargs):
                     "banner_name":banner_field.banner_name,
                     "banner_text": banner_field.banner_text,
                     "banner_background_img": banner_field.banner_background_image,
+                    "banner_height":banner_field.banner_height,
+                    "banner_font_size":banner_field.banner_font_size,
+                    "banner_alignment":banner_field.banner_alignment
                 }
             
             data_req = {
