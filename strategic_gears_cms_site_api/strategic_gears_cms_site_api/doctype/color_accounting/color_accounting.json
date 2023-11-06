@@ -14,6 +14,7 @@
   "background_section_heading",
   "background_section_subheading",
   "background_section_description",
+  "highlited_background_section_description",
   "industries",
   "industry_images",
   "recognized_universities_description",
@@ -112,12 +113,18 @@
    "fieldname": "learning_outcome_image",
    "fieldtype": "Attach Image",
    "label": "Learning Outcome Image"
+  },
+  {
+   "fieldname": "highlited_background_section_description",
+   "fieldtype": "Text",
+   "label": "Highlited Background Section Description",
+   "translatable": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-11-01 08:07:51.768911",
+ "modified": "2023-11-06 11:35:39.634446",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Color Accounting",

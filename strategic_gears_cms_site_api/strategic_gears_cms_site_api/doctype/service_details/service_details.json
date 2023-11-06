@@ -7,7 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "service_detail",
-  "sequence"
+  "sequence",
+  "show_on_website"
  ],
  "fields": [
   {
@@ -20,12 +21,18 @@
    "fieldname": "sequence",
    "fieldtype": "Data",
    "label": "Sequence"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_on_website",
+   "fieldtype": "Check",
+   "label": "Show on Website"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-01 07:56:39.873182",
+ "modified": "2023-11-06 11:44:28.706222",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Service Details",

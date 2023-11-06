@@ -45,16 +45,17 @@ def get_team_member(kwargs):
 def home_page_team_member(kwargs):
     try:
         user_language = kwargs.get('language')
-        team_details = frappe.get_all("Team Details",filters={"parent":"Our Team","show_on_website":1},fields=['team_member_name'])
+        team_details = frappe.get_all("Team Details", filters={"parent": "Our Team", "show_on_website": 1}, fields=['team_member_name'])
+        team_members_data = []
+
         for member in team_details:
-            team_member = frappe.get_doc("Team Member",member.team_member_name)
-            result = {
-                "employee_name":team_member.employee_name,
-                "designation":team_member.designation,
-                "image":team_member.image
-            }
-            translated_data = translate_keys(result, user_language) 
-        return success_response(data=translated_data)
+            team_member = frappe.get_list("Team Member", filters={"name": member.team_member_name}, fields=['employee_name', 'designation', 'image'])
+            translated_data = translate_keys(team_member, user_language) 
+            team_members_data.extend(translated_data)
+
+        return success_response(data=team_members_data)
+
     except Exception as e:
         frappe.logger("Team").exception(e)
         return error_response(e)
+
