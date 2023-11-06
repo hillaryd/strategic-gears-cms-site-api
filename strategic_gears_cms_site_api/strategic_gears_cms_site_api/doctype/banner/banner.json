@@ -10,9 +10,15 @@
  "engine": "InnoDB",
  "field_order": [
   "banner_name",
+  "slug",
   "banner_text",
   "banner_text_image",
   "banner_background_image",
+  "column_break_pxbwz",
+  "banner_height",
+  "banner_font_size",
+  "banner_alignment",
+  "section_break_vl1s3",
   "description",
   "sequence",
   "button_enable",
@@ -68,13 +74,40 @@
   {
    "fieldname": "banner_text_image",
    "fieldtype": "Attach Image",
-   "hidden": 1,
    "label": "Banner Text Image"
   },
   {
    "fieldname": "banner_background_image",
    "fieldtype": "Attach Image",
    "label": "Banner Background Image"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "label": "slug"
+  },
+  {
+   "fieldname": "column_break_pxbwz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "banner_height",
+   "fieldtype": "Data",
+   "label": "Banner Height"
+  },
+  {
+   "fieldname": "banner_font_size",
+   "fieldtype": "Data",
+   "label": "Banner Font Size"
+  },
+  {
+   "fieldname": "banner_alignment",
+   "fieldtype": "Data",
+   "label": "Banner Alignment"
+  },
+  {
+   "fieldname": "section_break_vl1s3",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "banner_text",
@@ -85,7 +118,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-03 14:03:59.303916",
+ "modified": "2023-11-06 07:18:45.364171",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Banner",

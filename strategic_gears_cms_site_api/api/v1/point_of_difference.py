@@ -7,7 +7,8 @@ def get_pod(kwargs):
         user_language = kwargs.get('language')
         data={}
         doc=frappe.get_doc("Points of Difference")
-        banner_list=frappe.db.get_list("Banner",filters={"name":doc.banner},fields=["banner_name","banner_text","banner_background_image"]) 
+        banner_list=frappe.db.get_list("Banner",filters={"name":doc.banner},fields=["banner_name","banner_text","banner_background_image"
+                                        ,"banner_height","banner_font_size","banner_alignment"]) 
         banner = banner_list[0]
         data["banner_data"]=banner
 

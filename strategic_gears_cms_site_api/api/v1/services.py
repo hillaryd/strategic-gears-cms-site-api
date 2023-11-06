@@ -42,7 +42,7 @@ def get_service_details(kwargs):
         service_name = kwargs.get('name')
 
         # Retrieve specific service details
-        banner = frappe.get_list("Banner", filters={"slug": service_name}, fields=["banner_name", "banner_text","banner_background_image"])
+        banner = frappe.get_list("Banner", filters={"slug": service_name}, fields=["banner_name", "banner_text","banner_background_image","banner_height","banner_font_size","banner_alignment"])
         banner_data = banner[0] if banner else {}
 
         service_desc = frappe.get_list("Services Master", filters={"slug": service_name}, fields=['description','name'],order_by = 'sequence')
