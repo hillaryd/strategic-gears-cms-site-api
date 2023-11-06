@@ -3,6 +3,15 @@ from frappe import _
 from strategic_gears_cms_site_api.utils import error_response, success_response
 
 @frappe.whitelist(allow_guest=True)
+def get_meta_tags(kwargs):
+    if not kwargs.get("page_name"):
+        return error_response("Missing argument 'page_name'")
+    meta = frappe.db.get_value("Meta Tags",{"page_name":kwargs.get("page_name")},
+                               ["page_name", "meta_title", "robots", "description"], as_dict=1)
+    return success_response(data = meta)
+
+
+@frappe.whitelist(allow_guest=True)
 def get_site_map(kwargs):
     try:
         if kwargs.get("type") == "category":

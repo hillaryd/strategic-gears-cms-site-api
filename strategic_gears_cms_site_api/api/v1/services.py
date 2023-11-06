@@ -66,3 +66,34 @@ def get_service_details(kwargs):
     except Exception as e:
         frappe.logger("Specific_Service_Details").exception(e)
         return error_response(e)
+
+
+@frappe.whitelist(allow_guest=True)
+def home_page_services(kwargs):
+    try:
+        user_language = kwargs.get('language')
+        services = frappe.get_list("Services Master",pluck="name",order_by = 'sequence')
+        banner=[]
+        data = []
+        details = []
+        service_list=[]
+        for service in services:
+            banner = frappe.get_list("Banner",filters={"name":service},fields=["banner_background_image","banner_name"])
+            for b in banner:
+                banner_data = b
+            service_details_list = frappe.get_all("Service Details",filters={"parent":service,"show_on_website":1},fields=["service_detail",'show_on_website'],order_by = 'sequence')
+            service_detail = []
+            for service_details in service_details_list:
+                get_service_details = frappe.get_all("Service Details Master",filters={"name":service_details.service_detail},fields=["heading","description","label"])
+                service_detail.extend(get_service_details)
+            service_desc = frappe.get_list("Services Master",filters={"name":service},fields=["description","slug"],order_by = 'sequence')
+            for service in service_desc:
+                desc = service
+            details = {"name":banner_data["banner_name"],"banner_image":banner_data["banner_background_image"],"slug":desc["slug"],"services_list":service_detail}
+           
+            data.append(details)
+        translated_data = translate_keys(data, user_language)    
+        return success_response(translated_data)
+    except Exception as e:
+        frappe.logger("Team").exception(e)
+        return error_response(e)

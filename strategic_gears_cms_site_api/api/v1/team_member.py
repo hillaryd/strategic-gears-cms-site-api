@@ -45,7 +45,7 @@ def get_team_member(kwargs):
 def home_page_team_member(kwargs):
     try:
         user_language = kwargs.get('language')
-        team_details = frappe.get_all("Team Details", filters={"parent": "Our Team", "show_on_website": 1}, fields=['team_member_name'])
+        team_details = frappe.get_all("Team Details", filters={"parent": "Our Team", "show_on_website": 1}, fields=['team_member_name','sequence'],order_by='sequence')
         team_members_data = []
 
         for member in team_details:

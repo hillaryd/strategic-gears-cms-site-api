@@ -28,12 +28,12 @@ class V1():
             'client':['get_client'],
             'point_of_difference':['get_pod'],
             'color_accounting':['get_color_accounting'],
-            'services':['get_service_details','get_service_list'],
+            'services':['get_service_details','get_service_list','home_page_services'],
             'newsletter':['get_newsletter'],
             'report':['get_report_list','report_details','home_page_report_list'],
             'corporate_news':['get_corporate_news_data','get_corporate_news_article_details'],
             'home':['get_introduction','get_home_banner'],
-            'seo':['get_site_map'],
+            'seo':['get_site_map','get_meta_tags'],
             'contact':['create_contact']
         }
 
