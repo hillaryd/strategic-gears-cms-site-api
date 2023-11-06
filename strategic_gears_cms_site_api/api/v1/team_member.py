@@ -10,22 +10,25 @@ def get_team_member(kwargs):
 
 
 
-        team = frappe.get_all("Team Member", pluck="name")
+        team_details = frappe.get_all("Team Details", filters={"parent": "Our Team"}, fields=['team_member_name','sequence'],order_by='sequence')
         team_member = []
 
-        for single_member in team:
+        for single_member in team_details:
             team_member_dict = {}
             
-            speciality = frappe.get_all("Speciality Details", filters={"parent":single_member},
+            speciality = frappe.get_all("Speciality Details", filters={"parent":single_member.team_member_name},
                                         pluck="speciality_name")
             
-            doc= frappe.get_doc("Team Member", single_member)
+            doc= frappe.get_doc("Team Member", single_member.team_member_name)
             team_member_image = doc.image
             team_member_name = doc.employee_name
             team_member_designation = doc.designation
             team_member_description = doc.description
 
-            team_member_dict = {"team_member_image":team_member_image, 
+            team_member_dict = {
+                                "name":single_member.team_member_name,
+                                "sequence":single_member.sequence,
+                                "team_member_image":team_member_image, 
                                 "team_member_name":team_member_name,
                                 "team_member_designation":team_member_designation,
                                 "team_member_speciality": speciality,
