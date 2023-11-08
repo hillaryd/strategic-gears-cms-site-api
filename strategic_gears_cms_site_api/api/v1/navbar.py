@@ -50,5 +50,7 @@ def prepare_url(prefix, parent=None,redirect_to_external_website=None,custom_url
         return f"/{parent}/{prefix}"
     elif redirect_to_external_website and custom_url:
         return custom_url
-    else:
+    elif prefix:
         return f"/{prefix}"
+    else:
+        return ""
