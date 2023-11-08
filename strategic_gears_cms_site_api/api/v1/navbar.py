@@ -19,7 +19,7 @@ def get_navbar_data(kwargs):
                 "url": prepare_url(category.slug, parent,category.redirect_to_external_website,category.custom_url),
                 "seq": category.sequence,
                 "slug": category.slug,
-                "values": []
+                "navbar_values": []
             }
 
 
@@ -32,9 +32,9 @@ def get_navbar_data(kwargs):
                     "url": prepare_url(child_category.slug,category.slug,None,None),
                     "seq": child_category.sequence,
                     "slug": child_category.slug,
-                    "values": []
+                    "navbar_values": []
                 }
-                navbar_item['values'].append(child_navbar_item)
+                navbar_item['navbar_values'].append(child_navbar_item)
 
             navbar_data.append(navbar_item)
         translated_data = translate_keys(navbar_data, user_language)
