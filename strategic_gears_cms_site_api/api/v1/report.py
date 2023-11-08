@@ -20,7 +20,7 @@ def get_report_list(kwargs):
         data_req["banner_data"]["banner_alignment"] = banner_field.banner_alignment
 
         for report in reports:
-            if user_language == "en":
+            if user_language == "en" and report.image != None:
                 report_info = {
                     "report_name": report.heading,
                     "label":report.label,
@@ -29,7 +29,7 @@ def get_report_list(kwargs):
                     "sequence":report.sequence
                 }
                 data_req["reports_list"].append(report_info) 
-            if user_language == "ar":    
+            if user_language == "ar" and report.custom_image_ar != None:    
                 report_info = {
                     "report_name": report.heading,
                     "label":report.label,
@@ -55,7 +55,7 @@ def report_details(kwargs):
         for report in reports:
             if not report:
                 return {"error": "Report not found"}
-            if user_language == 'en':
+            if user_language == "en" and report.image != None:
                 report_detail = {
                     "report_name": report.heading,
                     "label":report.label,
@@ -65,7 +65,7 @@ def report_details(kwargs):
                     "sequence":report.sequence,
                     "other_reports": []
                 }
-            if user_language == 'ar':
+            if user_language == "ar" and report.custom_image_ar != None:
                 report_detail = {
                     "report_name": report.heading,
                     "label":report.label,
@@ -81,7 +81,7 @@ def report_details(kwargs):
             for other_report in other_reports:
                 other_report_doc = frappe.get_doc("Reports Master", other_report.other_publications)
                 if other_report_doc:
-                    if user_language == 'en':
+                    if user_language == "en" and other_report_doc.image != None:
                         report_detail["other_reports"].append({
                             "report_name": other_report_doc.heading,
                             "label":other_report_doc.label,
@@ -89,7 +89,7 @@ def report_details(kwargs):
                             "slug":other_report_doc.slug,
                             "sequence":other_report_doc.sequence
                         })
-                    if user_language == 'ar':
+                    if user_language == "ar" and other_report_doc.custom_image_ar != None:
                         report_detail["other_reports"].append({
                             "report_name": other_report_doc.heading,
                             "label":other_report_doc.label,
@@ -113,7 +113,7 @@ def home_page_report_list(kwargs):
             "reports_list": []
         }
         for report in reports:
-            if user_language == "en":
+            if user_language == "en" and report.image != None:
                 report_info = {
                     "report_name": report.heading,
                     "label":report.label,
@@ -123,7 +123,7 @@ def home_page_report_list(kwargs):
                     "home_page_sequence":report.home_page_sequence
                 }
                 result["reports_list"].append(report_info) 
-            if user_language == "ar":    
+            if user_language == "ar" and report.custom_image_ar != None:    
                 report_info = {
                     "report_name": report.heading,
                     "label":report.label,

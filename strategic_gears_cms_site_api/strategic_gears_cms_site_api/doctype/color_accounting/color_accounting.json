@@ -124,13 +124,14 @@
   {
    "fieldname": "finacial_industry_description",
    "fieldtype": "Text",
-   "label": "Finacial Industry Description"
+   "label": "Finacial Industry Description",
+   "translatable": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-11-06 16:42:16.824908",
+ "modified": "2023-11-08 15:37:15.146704",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "Color Accounting",
