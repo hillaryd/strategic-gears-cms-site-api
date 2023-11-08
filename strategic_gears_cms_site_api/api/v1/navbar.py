@@ -22,10 +22,11 @@ def get_navbar_data(kwargs):
                 "navbar_values": []
             }
 
-
             child_categories = frappe.get_all("Category", filters={"parent_category": category.category_name}, fields=["category_name", "label", "custom_url", "sequence", "slug"],order_by = "sequence")
             
             for child_category in child_categories:
+                if user_language == "ar" and child_category.label == "Corporate News":
+                    continue
                 child_navbar_item = {
                     "name": child_category.category_name,
                     "label": child_category.label,
@@ -42,7 +43,6 @@ def get_navbar_data(kwargs):
     except Exception as e:
         frappe.logger("Navbar").exception(e)
         return error_response(e)
-
 
 
 def prepare_url(prefix, parent=None,redirect_to_external_website=None,custom_url=None):
