@@ -11,7 +11,9 @@
  "field_order": [
   "newsletter_name",
   "cover_image",
+  "cover_image_ar",
   "attach",
+  "attach_ar",
   "description",
   "button_label"
  ],
@@ -44,11 +46,21 @@
    "fieldtype": "Data",
    "label": "Button Label",
    "translatable": 1
+  },
+  {
+   "fieldname": "cover_image_ar",
+   "fieldtype": "Attach Image",
+   "label": "Cover Image Ar"
+  },
+  {
+   "fieldname": "attach_ar",
+   "fieldtype": "Attach",
+   "label": "Attach Ar"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-01 07:54:16.163224",
+ "modified": "2023-11-09 12:27:55.421980",
  "modified_by": "Administrator",
  "module": "strategic-gears-cms-site-api",
  "name": "NewsLetters Master",

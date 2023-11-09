@@ -21,13 +21,21 @@ def get_newsletter(kwargs):
         data["newsletters_list"]=[]
         newsletter_details = frappe.get_all("Newsletter Details",filters={"parent":doc},fields=['newsletter_master','sequence'],order_by='sequence')
         for newsletter in newsletter_details:
-            service_data = frappe.db.get_list('NewsLetters Master',
-                                    filters={'name': newsletter.newsletter_master},
-                                    fields=["newsletter_name",'cover_image',"attach"]
-                                    )
-            newsletter=service_data[0]
-            data["newsletters_list"].append({"newsletter_name":newsletter["newsletter_name"],"newsletter_image":newsletter["cover_image"],"newsletter_file":newsletter["attach"]})
-        translated_data = translate_keys(data, user_language)
+            if user_language == "en":
+                service_data = frappe.db.get_list('NewsLetters Master',
+                                        filters={'name': newsletter.newsletter_master},
+                                        fields=["newsletter_name",'cover_image',"attach"]
+                                        )
+                newsletter=service_data[0]
+                data["newsletters_list"].append({"newsletter_name":newsletter["newsletter_name"],"newsletter_image":newsletter["cover_image"],"newsletter_file":newsletter["attach"]})
+            if user_language == "ar":
+                service_data = frappe.db.get_list('NewsLetters Master',
+                                        filters={'name': newsletter.newsletter_master},
+                                        fields=["newsletter_name",'cover_image_ar',"attach_ar"]
+                                        )
+                newsletter=service_data[0]
+                data["newsletters_list"].append({"newsletter_name":newsletter["newsletter_name"],"newsletter_image":newsletter["cover_image_ar"],"newsletter_file":newsletter["attach_ar"]})    
+            translated_data = translate_keys(data, user_language)
         return success_response(data=translated_data)
     
     except Exception as e:
