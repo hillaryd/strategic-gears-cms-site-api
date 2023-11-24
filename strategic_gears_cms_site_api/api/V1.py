@@ -15,6 +15,7 @@ import strategic_gears_cms_site_api.api.v1.corporate_news as corporate_news
 import strategic_gears_cms_site_api.api.v1.home as home
 import strategic_gears_cms_site_api.api.v1.seo as seo
 import strategic_gears_cms_site_api.api.v1.contact as contact
+import strategic_gears_cms_site_api.api.v1.utils as utils
 
 
 class V1():
@@ -34,7 +35,8 @@ class V1():
             'corporate_news':['get_corporate_news_data','get_corporate_news_article_details'],
             'home':['get_introduction','get_home_banner'],
             'seo':['get_site_map','get_meta_tags'],
-            'contact':['create_contact']
+            'contact':['create_contact'],
+            'utils':['create_inquiry']
         }
 
     def class_map(self, kwargs):
