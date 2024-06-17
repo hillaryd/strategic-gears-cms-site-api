@@ -1,0 +1,9 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+frappe-semgrep-rules
+strategic_gears_cms_site_api/public/dist
+strategic_gears_cms_site_api/docs/current
+node_modules/

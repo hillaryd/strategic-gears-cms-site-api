@@ -22,7 +22,7 @@ class V1:
 	def __init__(self):
 		self.methods = {
 			"access_token": ["get_access_token"],
-			"navbar": ["get_data","get_navbar_data"],
+			"navbar": ["get_data", "get_navbar_data"],
 			"about_strategic_gears": ["get_about_strategic_gears"],
 			"team_member": ["get_team_member", "home_page_team_member"],
 			"client": ["get_client"],
@@ -44,7 +44,7 @@ class V1:
 		if self.methods.get(entity):
 			if method in self.methods.get(entity):
 				function = f"{kwargs.get('entity')}.{kwargs.get('method')}({kwargs})"
-				return eval(function)
+				return frappe.safe_eval(function)
 			else:
 				return error_response("Method Not Found!")
 		else:

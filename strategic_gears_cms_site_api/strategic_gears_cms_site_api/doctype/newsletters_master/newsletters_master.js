@@ -1,8 +1,7 @@
 // Copyright (c) 2023, shyam and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('NewsLetters Master', {
+frappe.ui.form.on("NewsLetters Master", {
 	// refresh: function(frm) {
-
 	// }
 });
