@@ -24,7 +24,7 @@ def create_contact(kwargs):
 					return error_response("Contact with this email already exists.")
 			doc = frappe.new_doc("Contact")
 			doc.update({"first_name": first_name, "last_name": last_name})
-
+			doc.custom_created_from_website=1
 			doc.append(
 				"email_ids",
 				{"doctype": "Contact Email", "email_id": email},
